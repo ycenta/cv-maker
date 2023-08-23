@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
+	darkMode: 'class',
 	theme: {
 		extend: {
 			colors: {
@@ -95,7 +96,7 @@ module.exports = {
 				}
 			},
 			{
-				darkProfessionnal: {
+				dark: {
 					primary: '#EBF0F2',
 					secondary: '#D9631E',
 					accent: '#8C4830',
@@ -108,6 +109,6 @@ module.exports = {
 				}
 			}
 		],
-		darkTheme: 'darkProfessionnal'
+		darkTheme: 'dark'
 	}
 };
