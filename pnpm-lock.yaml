@@ -1,17 +1,5 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
-dependencies:
-  dayjs:
-    specifier: ^1.11.9
-    version: 1.11.9
-  svelte-image-loader:
-    specifier: ^1.0.5
-    version: 1.0.5
-
 devDependencies:
   '@sveltejs/adapter-auto':
     specifier: ^2.1.0
@@ -31,6 +19,9 @@ devDependencies:
   daisyui:
     specifier: ^3.5.1
     version: 3.5.1
+  dayjs:
+    specifier: ^1.11.9
+    version: 1.11.9
   eslint:
     specifier: ^8.47.0
     version: 8.47.0
@@ -886,7 +877,7 @@ packages:
 
   /dayjs@1.11.9:
     resolution: {integrity: sha512-QvzAURSbQ0pKdIye2txOzNaHmxtUBXerpY0FJsFXUMKbIZeFm5ht1LS/jFsrncjnmtv8HsG0W2g6c0zUjZWmpA==}
-    dev: false
+    dev: true
 
   /debug@4.3.4:
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
@@ -1943,10 +1934,6 @@ packages:
       svelte: 4.2.0
     dev: true
 
-  /svelte-image-loader@1.0.5:
-    resolution: {integrity: sha512-RUf/G1bJz29p4K3hbLUfcFn5dt4B88YqrC0RsI3ghZzwmytmDHpUX/QdD2G0hkoUu9kYo1VYHGuhvxhxrj2ovg==}
-    dev: false
-
   /svelte-preprocess@5.0.4(postcss@8.4.28)(svelte@4.2.0)(typescript@5.1.6):
     resolution: {integrity: sha512-ABia2QegosxOGsVlsSBJvoWeXy1wUKSfF7SWJdTjLAbx/Y3SrVevvvbFNQqrSJw89+lNSsM58SipmZJ5SRi5iw==}
     engines: {node: '>= 14.10.0'}
@@ -2208,3 +2195,7 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
