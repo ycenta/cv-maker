@@ -23,7 +23,9 @@
 		{contactInfo.name}
 	</h4>
 	<h4 class="mx-2 mt-2 font-medium text-sm text-gray-800 dark:text-gray-200">
-		{contactInfo.email}
+		<a href="mailto:{contactInfo.email}">
+			{contactInfo.email}
+		</a>
 	</h4>
 	<h4 class="mx-2 mt-2 font-medium text-sm text-gray-800 dark:text-gray-200">
 		{contactInfo.phone}
@@ -31,15 +33,14 @@
 	<h5 class="mx-2 mt-2 font-light text-sm text-gray-800 dark:text-gray-200">
 		{contactInfo.nationality}
 	</h5>
-	<a
-		class="mx-2 mt-2 link font-light text-sm text-gray-800 dark:text-gray-200"
-		href={contactInfo.blog}
-	>
-		{contactInfo.blog}
-	</a>
-	<img
-		src="/bnei.dev_QR.png"
-		alt="QR code to https://bnei.dev"
-		class="w-16 h-16 place-self-end bg-white p-1"
-	/>
+	<div class="flex items-center mx-2 mt-2">
+		<a class=" link font-light text-sm text-gray-800 dark:text-gray-200" href={contactInfo.blog}>
+			{contactInfo.blog}
+		</a>
+		<img
+			src="/bnei.dev_QR.png"
+			alt="QR code to https://bnei.dev"
+			class="w-16 h-16 place-self-end bg-white p-1"
+		/>
+	</div>
 </div>

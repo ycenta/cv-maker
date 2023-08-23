@@ -36,7 +36,7 @@ module.exports = {
 					900: '#4c1d95',
 					950: '#2e1065'
 				},
-        
+
 				frontend: {
 					50: '#faf5f2',
 					100: '#f3e9e1',
@@ -95,6 +95,7 @@ module.exports = {
 					error: '#F87272'
 				}
 			},
+			'halloween',
 			{
 				dark: {
 					primary: '#EBF0F2',

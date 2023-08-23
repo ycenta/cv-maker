@@ -4,11 +4,6 @@
 		codes: string[];
 		comment?: string;
 	}
-
-	export interface IHobby {
-		name: string;
-		comment?: string;
-	}
 </script>
 
 <script lang="ts">
@@ -40,13 +35,13 @@
 	}
 </script>
 
-<div class="stats shadow">
+<div class="stats shadow w-full">
 	<div class="stat p-0">
-		<div class="stat-figure text-primary w-52">
+		<div class="stat-figure text-primary w-60">
 			<embed src="/worldmap.svg" bind:this={world} type="image/svg+xml" />
 		</div>
 		<!-- <div class="stat-title capitalize text-center h-fit">Langues</div> -->
-		<div class="p-2">
+		<div class="p-4">
 			{#each langs as lang}
 				<div class="stat-value text-lg capitalize">
 					{lang.name}

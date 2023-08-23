@@ -10,7 +10,7 @@
 
 	$: if (checked) {
 		localStorage.setItem('darkMode', 'true');
-		document.documentElement.setAttribute('data-theme', 'dark');
+		document.documentElement.setAttribute('data-theme', 'halloween');
 		document.documentElement.classList.add('dark');
 	} else {
 		localStorage.removeItem('darkMode');

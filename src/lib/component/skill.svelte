@@ -38,6 +38,9 @@
 			{/each}
 		</div>
 	{/each}
+</div>
+
+<div class="stats shadow lg:ml-2 mt-2 lg: mt-0">
 	<div class="stat w-40 bg-gray-300 dark:bg-gray-800">
 		<div class="stat-title capitalize text-center h-fit">Commandes</div>
 		<div class="flex justify-around">

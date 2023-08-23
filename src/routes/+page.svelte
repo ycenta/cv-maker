@@ -2,31 +2,58 @@
 	import Contact from '$lib/component/contact.svelte';
 	import Education from '$lib/component/education.svelte';
 	import Experience from '$lib/component/experience.svelte';
-	import Langage from '$lib/component/langHobby.svelte';
+	import Hobby from '$lib/component/hobby.svelte';
+	import Lang from '$lib/component/lang.svelte';
+	import HeadTags from '$lib/component/seo/HeadTags.svelte';
 	import Skill from '$lib/component/skill.svelte';
 	import Title from '$lib/component/title.svelte';
+	import type { IMetaTagProperties } from '$lib/seo';
 	import { experiences, selectedSkills } from '../store';
 
 	export let data: import('./$types').PageData;
 
 	$: experiences.set(data.experience);
+
+	let metaData: Partial<IMetaTagProperties> = {
+		title: 'CV de Mohammad-Amine Banaei',
+		description:
+			'Bienvenue sur mon CV en ligne. Vous trouverez ici toutes les informations concernant mes expériences, compétences, formations et coordonnées. N’hésitez pas à me contacter pour toute proposition ou pour plus d’informations.',
+		url: `https://cv.bnei.dev`,
+		logoUrl: 'https://cv.bnei.dev/favicon-32x32.png',
+		keywords: [
+			'CV',
+			'Mohammad-Amine Banaei',
+			'Expérience',
+			'Compétences',
+			'Formation',
+			...data.skills.map((skill) => skill.name)
+		],
+		searchUrl: `https://cv.bnei.dev`,
+		image: 'https://cv.bnei.dev/android-chrome-192x192.png',
+		sitemapUrl: 'https://cv.bnei.dev/sitemap.xml'
+	};
 </script>
+
+<HeadTags {metaData} />
 
 <div class="py-4 dark:bg-neutraldark:bg-neutral-800 shadow-sm rounded-sm navbar">
 	<Title {...data} />
 	<Contact {...data} />
 </div>
-<div class="hero dark:bg-base-300 h-screen pt-1">
+<div class="hero dark:bg-base-300 min-h-screen pt-1">
 	<div class="text-center lg:text-left desktop-grid w-full h-full place-items-center gap-2">
 		<!-- <div style="grid-area: picture;">
 			<img src="/photo_cv.jpg" alt="Mohammad-Amine Banaei" class="mask mask-squircle w-32" />
 		</div> -->
 		<div class="col-span-2 my-2 self-start flex">
 			<Skill {...data} />
-			<Langage {...data} />
 		</div>
 		<div class="px-6 self-start w-full">
 			<Education {...data} />
+			<div class="divider"></div>
+			<Lang {...data} />
+			<div class="divider"></div>
+			<Hobby {...data} />
 		</div>
 		<div class="pr-4 self-start w-full">
 			<Experience experience={$experiences} />
