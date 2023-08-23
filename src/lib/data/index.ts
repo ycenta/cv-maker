@@ -3,8 +3,9 @@ import type { ISkill } from '$lib/component/skill.svelte';
 import type { ITitle } from '$lib/component/title.svelte';
 import { education } from './education';
 import { experience } from './experiences';
+import { langs } from './lang';
 
-export { experience, education };
+export { experience, education, langs };
 
 export const title: ITitle = {
 	jobDesc: 'Ingénieur Web'

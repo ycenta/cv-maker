@@ -14,7 +14,7 @@
 	import SkillBadge from './ui/skillBadge.svelte';
 	import FilterMinus from './ui/svg/filterMinus.svelte';
 	import { browser } from '$app/environment';
-	import { fade } from 'svelte/transition';
+	import { fly, slide } from 'svelte/transition';
 
 	export let skills: ISkill[] = [
 		{
@@ -38,16 +38,20 @@
 			{/each}
 		</div>
 	{/each}
-	<div class="stat w-36 bg-gray-300 dark:bg-gray-800">
+	<div class="stat w-40 bg-gray-300 dark:bg-gray-800">
 		<div class="stat-title capitalize text-center h-fit">Commandes</div>
-		<div class="flex justify-evenly">
-			{#if $selectedSkills.length > 0}
-				<button transition:fade on:click={() => selectedSkills.reset()} class="btn btn-xs btn-square">
-					<FilterMinus width={15} />
-				</button>
-			{/if}
+		<div class="flex justify-around">
 			{#if browser}
-				<DarkModeBtn width={15} classes="btn btn-xs btn-square" />
+				<DarkModeBtn width={20} classes="btn btn-md btn-square justify-self-end" />
+			{/if}
+			{#if $selectedSkills.length > 0}
+				<button
+					transition:slide
+					on:click={() => selectedSkills.reset()}
+					class="btn btn-md btn-square justify-self-end"
+				>
+					<FilterMinus width={20} />
+				</button>
 			{/if}
 		</div>
 	</div>

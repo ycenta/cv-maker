@@ -2,6 +2,7 @@
 	import Contact from '$lib/component/contact.svelte';
 	import Education from '$lib/component/education.svelte';
 	import Experience from '$lib/component/experience.svelte';
+	import Langage from '$lib/component/langHobby.svelte';
 	import Skill from '$lib/component/skill.svelte';
 	import Title from '$lib/component/title.svelte';
 	import { experiences, selectedSkills } from '../store';
@@ -20,8 +21,9 @@
 		<!-- <div style="grid-area: picture;">
 			<img src="/photo_cv.jpg" alt="Mohammad-Amine Banaei" class="mask mask-squircle w-32" />
 		</div> -->
-		<div class="col-span-2 my-2 self-start">
+		<div class="col-span-2 my-2 self-start flex">
 			<Skill {...data} />
+			<Langage {...data} />
 		</div>
 		<div class="px-6 self-start w-full">
 			<Education {...data} />

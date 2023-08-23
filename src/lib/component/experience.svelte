@@ -21,6 +21,7 @@
 	import type { ISkill } from './skill.svelte';
 	import Skill from './skill.svelte';
 	import SkillBadge from './ui/skillBadge.svelte';
+	import { fly } from 'svelte/transition';
 
 	export let experience: IExperience[] = [
 		{
@@ -46,7 +47,7 @@
 <div class="lg:colums-2">
 	<ol class="relative border-l border-lime-200 dark:border-green-700">
 		{#each experience.sort((a, b) => b.endDate.getTime() - a.endDate.getTime()) as item, i}
-			<li class="ml-4 {i !== 0 ? 'mt-2' : ''} break-inside-avoid">
+			<li class="ml-4 {i !== 0 ? 'mt-2' : ''} break-inside-avoid" transition:fly>
 				<div
 					class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
 				></div>
