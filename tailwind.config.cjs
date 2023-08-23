@@ -110,6 +110,6 @@ module.exports = {
 				}
 			}
 		],
-		darkTheme: 'dark'
+		darkTheme: 'halloween',
 	}
 };

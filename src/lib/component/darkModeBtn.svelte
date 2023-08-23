@@ -15,7 +15,7 @@
 	} else {
 		localStorage.removeItem('darkMode');
 		document.documentElement.classList.remove('dark');
-		document.documentElement.removeAttribute('data-theme');
+		document.documentElement.setAttribute('data-theme', 'professionnal');
 	}
 </script>
 
