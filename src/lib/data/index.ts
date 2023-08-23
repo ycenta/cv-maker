@@ -18,13 +18,13 @@ export const contactInfo: IContactInfo = {
 	email: 'mohammadamine.banaei@pm.me',
 	links: [
 		{
+			url: 'https://bnei.dev',
+			type: 'other'
+		},
+		{
 			name: 'Github',
 			url: 'https://github.com/mohammadbnei',
 			type: 'github'
-		},
-		{
-			url: 'https://bnei.dev',
-			type: 'other'
 		},
 		{
 			name: 'LinkedIn',

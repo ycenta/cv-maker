@@ -22,7 +22,7 @@
 	$: if ($selectedSkills.length === 0) reset = true;
 </script>
 
-<ul class="menu menu-vertical lg:menu-horizontal w-min lg:h-20 lg:items-center lg:py-1">
+<ul class="menu lg:menu-vertical menu-horizontal lg:w-min lg:h-20 lg:justify-center lg:py-1">
 	{#if browser}
 		<li>
 			<DarkModeBtn width={20} />
