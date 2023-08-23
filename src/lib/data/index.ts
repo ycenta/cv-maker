@@ -16,7 +16,22 @@ export const contactInfo: IContactInfo = {
 	nationality: 'Nationalité Française',
 	phone: '+33 6 61 93 90 82',
 	email: 'mohammadamine.banaei@pm.me',
-	blog: 'https://bnei.dev'
+	links: [
+		{
+			name: 'Github',
+			url: 'https://github.com/mohammadbnei',
+			type: 'github'
+		},
+		{
+			url: 'https://bnei.dev',
+			type: 'other'
+		},
+		{
+			name: 'LinkedIn',
+			url: 'https://www.linkedin.com/in/mbnei',
+			type: 'linkedin'
+		}
+	]
 };
 
 export const skills: ISkill[] = [

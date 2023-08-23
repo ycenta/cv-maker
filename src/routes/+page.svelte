@@ -4,6 +4,7 @@
 	import Experience from '$lib/component/experience.svelte';
 	import Hobby from '$lib/component/hobby.svelte';
 	import Lang from '$lib/component/lang.svelte';
+	import Options from '$lib/component/options.svelte';
 	import HeadTags from '$lib/component/seo/HeadTags.svelte';
 	import Skill from '$lib/component/skill.svelte';
 	import Title from '$lib/component/title.svelte';
@@ -36,16 +37,19 @@
 
 <HeadTags {metaData} />
 
-<div class="py-4 dark:bg-neutraldark:bg-neutral-800 shadow-sm rounded-sm navbar">
+<div class="py-0 dark:bg-neutraldark:bg-neutral-800 shadow-sm rounded-sm navbar">
 	<Title {...data} />
-	<Contact {...data} />
+	<div class="flex flex-col lg:flex-row w-full">
+		<Contact {...data} />
+		<Options />
+	</div>
 </div>
 <div class="hero dark:bg-base-300 min-h-screen pt-1">
-	<div class="text-center lg:text-left desktop-grid w-full h-full place-items-center gap-2">
+	<div class="text-center lg:text-left desktop-grid w-screen h-full place-items-center gap-2">
 		<!-- <div style="grid-area: picture;">
 			<img src="/photo_cv.jpg" alt="Mohammad-Amine Banaei" class="mask mask-squircle w-32" />
 		</div> -->
-		<div class="col-span-2 my-2 self-start flex">
+		<div class="col-span-2 my-2 flex justify-center self-start w-full">
 			<Skill {...data} />
 		</div>
 		<div class="px-6 self-start w-full">

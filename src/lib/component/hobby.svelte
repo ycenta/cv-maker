@@ -15,7 +15,7 @@
 	];
 </script>
 
-<div class="stats shadow w-full">
+<div class="stats shadow stats-vertical lg:stats-horizontal w-full">
 	{#each hobbies as hobby}
 		<div class="stat">
 			<div class="stat-value text-lg capitalize">

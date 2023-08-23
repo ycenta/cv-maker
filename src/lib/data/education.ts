@@ -1,36 +1,36 @@
 import type { IEducation } from '$lib/component/education.svelte';
 
 export const education: IEducation[] = [
-	{
-		level: 'DUT',
-		title: 'DUT GEII (Génie électrique et informatique industrielle)',
-		school: 'IUT Lyon 1',
-		startDate: new Date('2013-09-01'),
-		endDate: new Date('2015-07-01'),
-		description: `Acquisition de connaissances en mathématiques, physique, électricité, électronique et robotique.`,
-		skills: [
-			{ name: 'mathématiques', category: 'science', color: 'gray' },
-			{ name: 'physique', category: 'science', color: 'gray' },
-			{ name: 'électricité', category: 'science', color: 'gray' },
-			{ name: 'électronique', category: 'science', color: 'gray' },
-			{ name: 'robotique', category: 'science', color: 'gray' }
-		]
-	},
-	{
-		startDate: new Date('2016-09-01'),
-		endDate: new Date('2017-07-01'),
-		level: '',
-		title: 'Flânerie',
-		school: '',
-		description: `Occupation de divers postes : serveur, technicien informatique, ouvrier dans le BTP. Acquisition d'une éthique du travail, de compétences en relation client et de rigueur.`,
-		skills: [
-			{ name: 'relation client', category: 'other', color: 'gray' },
-			{ name: 'rigeur', category: 'other', color: 'gray' }
-		]
-	},
+	// {
+	// 	level: 'DUT',
+	// 	title: 'DUT GEII (Génie électrique et informatique industrielle)',
+	// 	school: 'IUT Lyon 1',
+	// 	startDate: new Date('2013-09-01'),
+	// 	endDate: new Date('2015-07-01'),
+	// 	description: `Acquisition de connaissances en mathématiques, physique, électricité, électronique et robotique.`,
+	// 	skills: [
+	// 		{ name: 'mathématiques', category: 'science', color: 'gray' },
+	// 		{ name: 'physique', category: 'science', color: 'gray' },
+	// 		{ name: 'électricité', category: 'science', color: 'gray' },
+	// 		{ name: 'électronique', category: 'science', color: 'gray' },
+	// 		{ name: 'robotique', category: 'science', color: 'gray' }
+	// 	]
+	// },
+	// {
+	// 	startDate: new Date('2016-09-01'),
+	// 	endDate: new Date('2017-07-01'),
+	// 	level: '',
+	// 	title: 'Flânerie',
+	// 	school: '',
+	// 	description: `Occupation de divers postes : serveur, technicien informatique, ouvrier dans le BTP. Acquisition d'une éthique du travail, de compétences en relation client et de rigueur.`,
+	// 	skills: [
+	// 		{ name: 'relation client', category: 'other', color: 'gray' },
+	// 		{ name: 'rigeur', category: 'other', color: 'gray' }
+	// 	]
+	// },
 	{
 		level: 'Licence',
-		title: 'RNCP niveau II de Concepteur Développeur Informatique',
+		title: 'RNCP niveau II ',
 		school: 'My Digital School',
 		startDate: new Date('2017-09-01'),
 		endDate: new Date('2018-07-01'),
@@ -49,7 +49,7 @@ export const education: IEducation[] = [
 	},
 	{
 		level: 'Master',
-		title: 'RNCP niveau I de Concepteur Développeur Informatique',
+		title: 'RNCP niveau I ',
 		school: 'ESGI',
 		startDate: new Date('2019-09-01'),
 		endDate: new Date('2021-07-01'),

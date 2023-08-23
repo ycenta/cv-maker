@@ -35,9 +35,9 @@
 	}
 </script>
 
-<div class="stats shadow w-full">
+<div class="stats shadow w-full stats-vertical lg:stats-horizontal">
 	<div class="stat p-0">
-		<div class="stat-figure text-primary w-60">
+		<div class="stat-figure text-primary w-60 hidden sm:grid" >
 			<embed src="/worldmap.svg" bind:this={world} type="image/svg+xml" />
 		</div>
 		<!-- <div class="stat-title capitalize text-center h-fit">Langues</div> -->

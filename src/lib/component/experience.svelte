@@ -19,7 +19,6 @@
 <script lang="ts">
 	import Detail from './ui/svg/detail.svelte';
 	import type { ISkill } from './skill.svelte';
-	import Skill from './skill.svelte';
 	import SkillBadge from './ui/skillBadge.svelte';
 	import { fly } from 'svelte/transition';
 
@@ -44,15 +43,15 @@
 	];
 </script>
 
-<div class="lg:colums-2">
-	<ol class="relative border-l border-lime-200 dark:border-green-700">
+<div class="lg:columns-2">
+	<ol class="relative border-l-2 border-lime-200 dark:border-green-700">
 		{#each experience.sort((a, b) => b.endDate.getTime() - a.endDate.getTime()) as item, i}
 			<li class="ml-4 {i !== 0 ? 'mt-2' : ''} break-inside-avoid" transition:fly>
 				<div
-					class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+					class="absolute w-3 h-3 bg-gray-200 rounded-full mt-8 -left-[6.5px] border border-white dark:border-gray-900 dark:bg-gray-700"
 				></div>
 				<div
-					class="card dark:bg-neutral-800 shadow-lg rounded-sm pb-3 hover:scale-[1.025] transition hover:cursor-pointer"
+					class="card dark:bg-neutral-800 shadow-lg rounded-sm hover:scale-[1.025] transition hover:cursor-pointer"
 					on:click|stopPropagation={() =>
 						document.getElementById(`${item.enterprise}-modal`)?.click()}
 					on:keyup={(k) =>
@@ -61,7 +60,7 @@
 					role="button"
 					tabindex="0"
 				>
-					<div class="card-body py-6">
+					<div class="card-body py-4">
 						<div class="flex items-end">
 							<time class="mb-1 text-sm font-normal text-accent w-56">
 								{formatDate(item.startDate)} - {formatDate(item.endDate)}

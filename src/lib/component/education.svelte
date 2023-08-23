@@ -42,13 +42,16 @@
 				<div class="card-body p-2">
 					<div class="collapse collapse-arrow">
 						<input type="checkbox" />
-						<div class="collapse-title items-center flex">
-							<h3 class="font-semibold card-title text-sm">
+						<div class="collapse-title items-center flex justify-between">
+							<h3 class="font-semibold card-title text-sm text-left">
+								{item.school}
+							</h3>
+							<div class="text-sm">
 								{#if item.level}
-									{item.level} -
+									{item.level + ' '}
 								{/if}
 								{item.title}
-							</h3>
+							</div>
 						</div>
 						<div class="collapse-content">
 							<p class="mb-4 text-sm font-normal">
