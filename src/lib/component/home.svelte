@@ -7,28 +7,28 @@
 	import Options from '$lib/component/options.svelte';
 	import Skill, { type ISkill } from '$lib/component/skill.svelte';
 	import Title, { type ITitle } from '$lib/component/title.svelte';
-	import { experiences } from '../../store';
+	import { experiences, snapshotMode } from '../../store';
 
-
-  export let  experience: IExperience[];
-  export let  education: IEducation[];
-  export let  langs: ILang[];
-  export let  hobbies: IHobby[];
-  export let  title: ITitle;
-  export let  contactInfo: IContactInfo;
-  export let  skills: ISkill[];
+	export let experience: IExperience[];
+	export let education: IEducation[];
+	export let langs: ILang[];
+	export let hobbies: IHobby[];
+	export let title: ITitle;
+	export let contactInfo: IContactInfo;
+	export let skills: ISkill[];
 
 	$: experiences.set(experience);
-
 </script>
 
 <div class="py-0 dark:bg-base-100 shadow-sm rounded-sm navbar">
 	<Title {title} />
 	<div class="flex flex-col sm:flex-row w-full">
 		<Contact {contactInfo} />
-		<div class="self-end">
-			<Options />
-		</div>
+		{#if !$snapshotMode}
+			<div class="self-end">
+				<Options />
+			</div>
+			{/if}
 	</div>
 </div>
 <div class="hero grow pt-1 pb-2">

@@ -6,8 +6,13 @@
 	import 'dayjs/locale/en';
 	import { page } from '$app/stores';
 	import { fly } from 'svelte/transition';
+	import { snapshotMode } from '../store';
 
 	$: $page.url.pathname.includes('en') ? dayjs.locale('en') : dayjs.locale('fr');
+
+	page.subscribe((p) => {
+		snapshotMode.set(p.url.searchParams.has('snapshot'));
+	});
 </script>
 
 {#key $page.url.pathname}

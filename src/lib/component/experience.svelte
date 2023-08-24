@@ -21,6 +21,7 @@
 	import type { ISkill } from './skill.svelte';
 	import SkillBadge from './ui/skillBadge.svelte';
 	import { fly } from 'svelte/transition';
+	import { snapshotMode } from '../../store';
 
 	export let experience: IExperience[] = [
 		{
@@ -61,10 +62,10 @@
 					tabindex="0"
 				>
 					<div class="card-body py-4">
-							<time class="text-sm font-normal text-accent self-start -mb-2 ">
-								{formatDate(item.startDate)} -
-								{formatDate(item.endDate)}
-							</time>
+						<time class="text-sm font-normal text-accent self-start -mb-2">
+							{formatDate(item.startDate)} -
+							{formatDate(item.endDate)}
+						</time>
 						<h3 class="font-bold text-xl capitalize card-title text-left">
 							{item.enterprise} - {item.position}
 						</h3>
@@ -77,22 +78,28 @@
 							<Badge content={skill.content} color={skill.color} />
 							{/each}
 						</div> -->
-							<div class="tooltip tooltip-left" data-tip="Détails de la mission">
-								<button
-									aria-label="details"
-									class="btn btn-sm btn-outline"
-									id="{item.enterprise}-modal"
-									on:click={() => document.getElementById(item.enterprise)?.showModal()}
-									><Detail width={20} /></button
-								>
-							</div>
+							{#if !$snapshotMode}
+								<!-- content here -->
+								<div class="tooltip tooltip-left" data-tip="Détails de la mission">
+									<button
+										aria-label="details"
+										class="btn btn-sm btn-outline"
+										id="{item.enterprise}-modal"
+										on:click={() => document.getElementById(item.enterprise)?.showModal()}
+										><Detail width={20} /></button
+									>
+								</div>
+							{/if}
 						</div>
 					</div>
 				</div>
 			</li>
 			<dialog id={item.enterprise} class="modal modal-bottom sm:modal-middle">
 				<form method="dialog" class="modal-box max-h-[70vh]">
-					<button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" aria-label="close modal">✕</button>
+					<button
+						class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+						aria-label="close modal">✕</button
+					>
 					<h3 class="font-bold text-lg text-center">Missions : {item.enterprise}</h3>
 					<ul class="ml-4 mt-4">
 						{#each item.missions || [] as mission, i}

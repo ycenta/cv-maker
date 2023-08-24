@@ -2,6 +2,12 @@ import type { IExperience } from '$lib/component/experience.svelte';
 import type { ISkill } from '$lib/component/skill.svelte';
 import { writable } from 'svelte/store';
 
+export const snapshotMode = writable(false);
+
+snapshotMode.subscribe((mode) => {
+	console.log({ mode });
+});
+
 const selectedSkillStore = () => {
 	const { set, update, subscribe } = writable<ISkill[]>([]);
 
