@@ -61,7 +61,7 @@
 		>
 			<Worldmap bind:worldMapSvg />
 		</div>
-		<div class="stats w-min stats-vertical">
+		<div class="stats sm:w-min stats-vertical">
 			{#each langs as lang}
 				<div class="stat py-">
 					<div class="stat-value text-lg capitalize">
