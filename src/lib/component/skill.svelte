@@ -33,7 +33,7 @@
 		<div class="stat w-44 ">
 			<div class="stat-title capitalize text-center h-fit">{category}</div>
 			{#each skills.filter((skill) => skill.category === category) as skill}
-				<button on:click={() => selectedSkills.add(skill)} class="mb-1">
+				<button aria-label="filter by skill {skill.name}" on:click={() => selectedSkills.add(skill)} class="mb-1">
 					<SkillBadge {skill} scale />
 				</button>
 			{/each}
@@ -48,7 +48,7 @@
 				<div class="stat w-44">
 					<div class="stat-title capitalize text-center">{mCategory}</div>
 					{#each skills.filter((skill) => skill.category === mCategory) as skill}
-						<button on:click={() => selectedSkills.add(skill)} class="mb-1">
+						<button aria-label="filter by skill {skill.name}" on:click={() => selectedSkills.add(skill)} class="mb-1">
 							<SkillBadge {skill} scale />
 						</button>
 					{/each}

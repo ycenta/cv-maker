@@ -79,6 +79,7 @@
 						</div> -->
 							<div class="tooltip tooltip-left" data-tip="Détails de la mission">
 								<button
+									aria-label="details"
 									class="btn btn-sm btn-outline"
 									id="{item.enterprise}-modal"
 									on:click={() => document.getElementById(item.enterprise)?.showModal()}
@@ -91,7 +92,7 @@
 			</li>
 			<dialog id={item.enterprise} class="modal modal-bottom sm:modal-middle">
 				<form method="dialog" class="modal-box max-h-[70vh]">
-					<button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+					<button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" aria-label="close modal">✕</button>
 					<h3 class="font-bold text-lg text-center">Missions : {item.enterprise}</h3>
 					<ul class="ml-4 mt-4">
 						{#each item.missions || [] as mission, i}
@@ -112,7 +113,7 @@
 					</ul>
 				</form>
 				<form method="dialog" class="modal-backdrop">
-					<button>close</button>
+					<button aria-label="close modal">close</button>
 				</form>
 			</dialog>
 		{/each}
