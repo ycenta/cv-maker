@@ -1,10 +1,11 @@
 # Dynamic Resume Maker
 
-![vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white) [![Vercel Deployment](https://therealsujitk-vercel-badge.vercel.app/?app=cv-maker&style=for-the-badge&logo=false)](https://cv.bnei.dev) ![svelte](https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00) ![tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) 
-
-
+![vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white) [![Vercel Deployment](https://therealsujitk-vercel-badge.vercel.app/?app=cv-maker&style=for-the-badge&logo=false)](https://cv.bnei.dev) ![svelte](https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00) ![tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 This project is a dynamic resume maker developed using SvelteKit, TailwindCSS, and DaisyUI. It allows users to create personalized resumes featuring customizable sections like experience, skills, and hobbies. Users can edit these sections with their details and also style their resumes with different themes.
+
+Demo : <https://cv.bnei.dev>
+Blog: <https://bnei.dev>
 
 ## Features
 
@@ -40,7 +41,7 @@ pnpm dev
 
 All data should be filled in the 'lib/data' folder. French and English versions of the +page.svelte file are provided to structure the information in these languages.
 
-1. Navigate to the 'lib/data' folder and choose your preferred language version file (+page.svelte). 
+1. Navigate to the 'lib/data' folder and choose your preferred language version file (+page.svelte).
 2. Fill in your details in the appropriate sections.
 3. The application will automatically update your resume.
 
