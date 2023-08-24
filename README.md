@@ -1,38 +1,60 @@
-# create-svelte
+# Dynamic Resume Maker
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This project is a dynamic resume maker developed using SvelteKit, TailwindCSS, and DaisyUI. It allows users to create personalized resumes featuring customizable sections like experience, skills, and hobbies. Users can edit these sections with their details and also style their resumes with different themes.
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- Add/Edit/Delete resume sections (Experience, Skills, Hobbies etc.)
+- Customize the look and feel of the resume
+- Download resume in PDF or Word formats
+- Multilingual support (French and English versions available)
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Technologies Used
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+This application is built with the following technologies:
 
-## Developing
+- [SvelteKit](https://kit.svelte.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [DaisyUI](https://daisyui.com/)
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Installation & Getting Started
 
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
+1. Clone the repository to your local machine.
+2. Install dependencies using either npm or yarn:
 
 ```bash
-npm run build
+pnpm install
 ```
 
-You can preview the production build with `npm run preview`.
+3. Start the development server:
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+```bash
+pnpm dev
+```
+
+## Usage
+
+All data should be filled in the 'lib/data' folder. French and English versions of the +page.svelte file are provided to structure the information in these languages.
+
+1. Navigate to the 'lib/data' folder and choose your preferred language version file (+page.svelte). 
+2. Fill in your details in the appropriate sections.
+3. The application will automatically update your resume.
+
+## Contributing
+
+Contributions to this project are welcome. Please ensure to follow these guidelines:
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Create a new Pull Request
+
+## License Information
+
+Please see the included LICENSE file for more information.
+
+## Contact & Acknowledgements
+
+If you need help or have any feedback, please reach out ([mohammadamine.banaei@pm.me](mailto:mohammadamine.banaei@pm.me)).
+Special thanks to all contributors to this project.
