@@ -11,7 +11,7 @@
 
 <script lang="ts">
 	import SkillBadge from './ui/skillBadge.svelte';
-	
+
 	export let skills: ISkill[] = [
 		{
 			name: 'golang',
@@ -21,9 +21,14 @@
 	];
 
 	const categories: ISkill['category'][] = ['devops', 'backend', 'frontend', 'system', 'data'];
+	const mobileCategories: Array<ISkill['category'][]> = [
+		['backend', 'frontend'],
+		['devops', 'system'],
+		['data']
+	];
 </script>
 
-<div class="stats shadow stats-vertical lg:stats-horizontal h-fit">
+<div class="stats shadow h-fit hidden lg:inline-grid">
 	{#each categories as category}
 		<div class="stat w-36">
 			<div class="stat-title capitalize text-center h-fit">{category}</div>
@@ -31,6 +36,23 @@
 				<button on:click={() => selectedSkills.add(skill)} class="mb-1">
 					<SkillBadge {skill} scale />
 				</button>
+			{/each}
+		</div>
+	{/each}
+</div>
+
+<div class="lg:hidden">
+	{#each mobileCategories as mCategories}
+		<div class="stats shadow mb-2 mx-2">
+			{#each mCategories as mCategory}
+				<div class="stat w-36">
+					<div class="stat-title capitalize text-center">{mCategory}</div>
+					{#each skills.filter((skill) => skill.category === mCategory) as skill}
+						<button on:click={() => selectedSkills.add(skill)} class="mb-1">
+							<SkillBadge {skill} scale />
+						</button>
+					{/each}
+				</div>
 			{/each}
 		</div>
 	{/each}

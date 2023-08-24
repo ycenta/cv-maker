@@ -31,7 +31,7 @@ export const education: IEducation[] = [
 	{
 		level: 'Licence',
 		title: 'RNCP niveau II ',
-		school: 'My Digital School',
+		school: 'My Digital School - Paris',
 		startDate: new Date('2017-09-01'),
 		endDate: new Date('2018-07-01'),
 		description: `Formation intensive en NodeJS, React, Python, Flutter et Kotlin. Apprentissage de la gestion de bases de données SQL et NoSQL et de la méthodologie Agile.`,
@@ -50,7 +50,7 @@ export const education: IEducation[] = [
 	{
 		level: 'Master',
 		title: 'RNCP niveau I ',
-		school: 'ESGI',
+		school: 'ESGI - Paris',
 		startDate: new Date('2019-09-01'),
 		endDate: new Date('2021-07-01'),
 		description: `Formation avancée en GoLang, Python, NodeJS, React, Docker, Linux, Terraform et Kubernetes. Exploration des technologies cloud et méthodologie Agile.`,

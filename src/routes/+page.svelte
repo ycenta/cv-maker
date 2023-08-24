@@ -32,7 +32,7 @@
 
 <div class="py-0 dark:bg-base-100 shadow-sm rounded-sm navbar">
 	<Title {...data} />
-	<div class="flex flex-col lg:flex-row w-full">
+	<div class="flex flex-col lg:flex-row w-full items-end">
 		<Contact {...data} />
 		<Options />
 	</div>
@@ -42,18 +42,20 @@
 		<!-- <div style="grid-area: picture;">
 			<img src="/photo_cv.jpg" alt="Mohammad-Amine Banaei" class="mask mask-squircle w-32" />
 		</div> -->
-		<div class="col-span-2 my-2 flex justify-center self-start w-full">
+		<div class="my-2 flex justify-center self-start w-full" style="grid-area: skill;">
 			<Skill {...data} />
 		</div>
-		<div class="px-6 self-start w-full">
+		<div class="px-2 self-start w-full" style="grid-area: experience;">
+			<Experience experience={$experiences} />
+		</div>
+		<div class="divider lg:hidden"></div>
+		<div class="px-2 self-start w-full" style="grid-area: education;">
 			<Education {...data} />
 			<div class="divider"></div>
 			<Lang {...data} />
 			<div class="divider"></div>
 			<Hobby {...data} />
-		</div>
-		<div class="pr-4 self-start w-full">
-			<Experience experience={$experiences} />
+			<div class="mb-4 lg:mb-0"></div>
 		</div>
 	</div>
 </div>
@@ -67,13 +69,9 @@
 			grid-column-gap: 0px;
 			grid-row-gap: 0px;
 
-			/* grid-template-areas:
-				'education education experience experience experience'
-				'education education experience experience experience'
-				'education education experience experience experience'
-				'education education experience experience experience'
-				'education education experience experience experience'
-				'education education langage langage hobby'; */
+			grid-template-areas:
+				'skill skill'
+				'education experience';
 		}
 	}
 </style>

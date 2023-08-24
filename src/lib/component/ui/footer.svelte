@@ -1,5 +1,5 @@
 <footer class="footer items-center p-4 bg-neutral text-neutral-content">
-	<div class="items-center grid-flow-col">
+	<div class="items-center grid-flow-col justify-self-center md:justify-self-start">
 		<svg
 			width="36"
 			height="36"
@@ -14,8 +14,8 @@
 		>
 		<p class="text-lg">🧑🏽‍💻 : Mohammad-Amine BANAEI</p>
 	</div>
-	<div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-		<a href="https://github.com/MohammadBnei/cv-maker" class=" items-center flex gap-2"
+	<div class="grid-flow-col gap-4 md:place-self-center justify-self-center md:justify-self-end">
+		<a href="https://github.com/MohammadBnei/cv-maker" class="items-center flex gap-2"
 			>Made with 🧠 <svg
 				width="24"
 				height="24"

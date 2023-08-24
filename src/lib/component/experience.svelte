@@ -48,7 +48,7 @@
 		{#each experience.sort((a, b) => b.endDate.getTime() - a.endDate.getTime()) as item, i}
 			<li class="ml-4 {i !== 0 ? 'mt-2' : ''} break-inside-avoid" transition:fly>
 				<div
-					class="absolute w-3 h-3 bg-gray-200 rounded-full mt-8 -left-[6.5px] border border-white dark:border-gray-900 dark:bg-gray-700"
+					class="absolute w-3 h-3 bg-gray-200 rounded-full mt-5 -left-[6.5px] border border-white dark:border-gray-900 dark:bg-gray-700"
 				></div>
 				<div
 					class="card dark:bg-neutral-800 shadow-lg rounded-sm hover:scale-[1.025] transition hover:cursor-pointer"
@@ -61,14 +61,13 @@
 					tabindex="0"
 				>
 					<div class="card-body py-4">
-						<div class="flex items-end">
-							<time class="mb-1 text-sm font-normal text-accent w-56">
-								{formatDate(item.startDate)} - {formatDate(item.endDate)}
+							<time class="text-sm font-normal text-accent self-start -mb-2 ">
+								{formatDate(item.startDate)} -
+								{formatDate(item.endDate)}
 							</time>
-							<h3 class="font-bold text-xl capitalize card-title">
-								{item.enterprise} - {item.position}
-							</h3>
-						</div>
+						<h3 class="font-bold text-xl capitalize card-title text-left">
+							{item.enterprise} - {item.position}
+						</h3>
 						<div class="flex gap-2 items-center">
 							<p class="text-sm font-normal">
 								{item.description}
