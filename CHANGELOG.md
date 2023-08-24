@@ -1,5 +1,12 @@
 
 
+## [0.2.2](https://github.com/MohammadBnei/cv-maker/compare/0.2.1...0.2.2) (2023-08-24)
+
+
+### Bug Fixes
+
+* **experience.svelte:** change aria-controls attribute to aria-label attribute for better accessibility and semantics ([0552319](https://github.com/MohammadBnei/cv-maker/commit/0552319b99c0e264469fd477a6e0842e558b4e56))
+
 ## [0.2.1](https://github.com/MohammadBnei/cv-maker/compare/0.2.0...0.2.1) (2023-08-24)
 
 # [0.2.0](https://github.com/MohammadBnei/cv-maker/compare/0.1.0...0.2.0) (2023-08-24)
