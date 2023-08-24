@@ -46,9 +46,6 @@
 				"preset": "angular",
 				"infile": "CHANGELOG.md"
 			}
-		},
-		"github": {
-			"release": true
 		}
 	}
 }
