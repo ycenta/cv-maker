@@ -24,7 +24,7 @@
 		keywords: ['CV', data.contactInfo.name, ...data.skills.map((skill) => skill.name)],
 		searchUrl: `https://cv.bnei.dev`,
 		image: 'https://cv.bnei.dev/android-chrome-192x192.png',
-		sitemapUrl: 'https://cv.bnei.dev/sitemap.xml'
+		sitemapUrl: 'https://cv.bnei.dev/sitemap.xml',
 	};
 </script>
 
