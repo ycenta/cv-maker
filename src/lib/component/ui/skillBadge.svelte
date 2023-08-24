@@ -7,7 +7,7 @@
 </script>
 
 <span
-	class="inline-flex items-center rounded-md {skill.category} default px-2 py-1 text-xs ring-1 ring-inset {scale
+	class="inline-flex items-center font-bold rounded-md {skill.category} default px-2 py-1 ring-1 ring-inset {scale
 		? 'hover:scale-[1.03]'
 		: 'hover:skew-y-2'} transition
 		{$selectedSkills.includes(skill) ? 'outline outline-2' : ''}

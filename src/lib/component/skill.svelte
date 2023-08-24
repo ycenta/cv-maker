@@ -30,7 +30,7 @@
 
 <div class="stats shadow h-fit hidden lg:inline-grid">
 	{#each categories as category}
-		<div class="stat w-36">
+		<div class="stat w-44 ">
 			<div class="stat-title capitalize text-center h-fit">{category}</div>
 			{#each skills.filter((skill) => skill.category === category) as skill}
 				<button on:click={() => selectedSkills.add(skill)} class="mb-1">
@@ -45,7 +45,7 @@
 	{#each mobileCategories as mCategories}
 		<div class="stats shadow mb-2 mx-2">
 			{#each mCategories as mCategory}
-				<div class="stat w-36">
+				<div class="stat w-44">
 					<div class="stat-title capitalize text-center">{mCategory}</div>
 					{#each skills.filter((skill) => skill.category === mCategory) as skill}
 						<button on:click={() => selectedSkills.add(skill)} class="mb-1">
