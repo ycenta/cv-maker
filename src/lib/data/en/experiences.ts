@@ -182,7 +182,8 @@ export const experience: IExperience[] = [
 					{ name: 'architecture', category: 'devops' },
 					{ name: 'microservices', category: 'devops' },
 					{ name: 'kubernetes', category: 'devops' },
-					{ name: 'docker', category: 'devops' }
+					{ name: 'docker', category: 'devops' },
+					{ name: 'gcp', category: 'system' }
 				]
 			},
 			{
@@ -194,7 +195,8 @@ export const experience: IExperience[] = [
 					{ name: 'github action', category: 'devops' },
 					{ name: 'circleci', category: 'devops' },
 					{ name: 'docker', category: 'devops' },
-					{ name: 'ansible', category: 'devops' }
+					{ name: 'ansible', category: 'devops' },
+					{ name: 'gcp', category: 'system' }
 				]
 			},
 			{
@@ -224,7 +226,11 @@ export const experience: IExperience[] = [
 			{
 				title: 'Architecture',
 				description: `Creation of the project's architecture.`,
-				skills: [{ name: 'microservices', category: 'devops' }]
+				skills: [
+					{ name: 'microservices', category: 'devops' },
+					{ name: 'gcp', category: 'system' },
+					{ name: 'bare metal', category: 'system' }
+				]
 			},
 			{
 				title: 'Development',

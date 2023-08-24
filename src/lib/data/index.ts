@@ -68,6 +68,10 @@ export const skills: ISkill[] = [
 		category: 'devops'
 	},
 	{
+		name: 'gcp',
+		category: 'system'
+	},
+	{
 		name: 'linux',
 		category: 'system'
 	}

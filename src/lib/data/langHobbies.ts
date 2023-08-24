@@ -22,10 +22,12 @@ export const langs: ILang[] = [
 export const hobbies: IHobby[] = [
 	{
 		name: 'boxe',
-		comment: 'anglaise & thaïlandaise'
+		comment: 'anglaise & thaïlandaise',
+		svg: '/boxing-glove.svg'
 	},
 	{
 		name: 'lecture',
-		comment: 'Weber, Maupassant'
+		comment: 'Weber, Maupassant',
+		svg: '/reading.svg'
 	}
 ];
