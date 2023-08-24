@@ -26,7 +26,7 @@ jobs:
 
       - name: release-it
         run: |
-          npm install --no-save release-it @release-it/conventional-changelog
+          npm install --no-save --force release-it @release-it/conventional-changelog
           npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
