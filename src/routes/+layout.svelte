@@ -3,12 +3,17 @@
 	import '../app.css';
 	import dayjs from 'dayjs';
 	import 'dayjs/locale/fr';
+	import 'dayjs/locale/en';
+	import { page } from '$app/stores';
+	import { fly, slide } from 'svelte/transition';
 
-	dayjs.locale('fr');
+	$: $page.url.pathname.includes('en') ? dayjs.locale('en') : dayjs.locale('fr');
 </script>
 
-<div class="min-h-screen dark:bg-base-300">
-	<slot />
-</div>
+{#key $page.url.pathname}
+	<div class="min-h-screen dark:bg-base-300" in:fly>
+		<slot />
+	</div>
+{/key}
 
 <Footer />

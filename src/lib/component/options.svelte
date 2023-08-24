@@ -4,6 +4,9 @@
 	import { selectedSkills } from '../../store';
 	import FilterMinus from './ui/svg/filterMinus.svelte';
 	import DarkModeBtn from './darkModeBtn.svelte';
+	import { page } from '$app/stores';
+	import Fr from './ui/svg/fr.svelte';
+	import Uk from './ui/svg/uk.svelte';
 
 	let pulseCount = 0;
 	let pulse = false;
@@ -22,22 +25,35 @@
 	$: if ($selectedSkills.length === 0) reset = true;
 </script>
 
-<ul class="menu sm:menu-vertical menu-horizontal flex-row-reverse lg:w-min sm:h-24 sm:justify-center sm:py-1">
-	{#if browser}
+<div class="sm:w-28 sm:h-24">
+	<ul
+		class="menu sm:menu-vertical menu-horizontal flex-row-reverse sm:justify-center sm:w-min h-full flex-wrap sm:py-1"
+	>
+		{#if browser}
+			<li>
+				<DarkModeBtn width={22} />
+			</li>
+		{/if}
 		<li>
-			<DarkModeBtn width={22} />
-		</li>
-	{/if}
-	{#if $selectedSkills.length > 0}
-		<li class:animate-bounce={pulse}>
-			<a
-				transition:slide
-				on:click|preventDefault={() => selectedSkills.reset()}
-				href="/"
-				class="p-2"
-			>
-				<FilterMinus width={22} />
+			<a href={$page.url.pathname.includes('en') ? '/' : '/en'}>
+				{#if $page.url.pathname.includes('en')}
+					<Fr width={22} />
+				{:else}
+					<Uk width={22} />
+				{/if}
 			</a>
 		</li>
-	{/if}
-</ul>
+		{#if $selectedSkills.length > 0}
+			<li class:animate-bounce={pulse}>
+				<a
+					transition:slide
+					on:click|preventDefault={() => selectedSkills.reset()}
+					href="/"
+					class="p-2"
+				>
+					<FilterMinus width={22} />
+				</a>
+			</li>
+		{/if}
+	</ul>
+</div>
