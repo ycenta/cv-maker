@@ -3,7 +3,6 @@
 </script>
 
 <svg
-	class="z-10"
 	version="1.2"
 	baseProfile="tiny"
 	xmlns="http://www.w3.org/2000/svg"

@@ -9,9 +9,11 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import { tick } from 'svelte';
+	import { throttle } from '@sveu/shared';
 
 	import Worldmap from './ui/svg/worldmap.svelte';
 	import { darkMode } from '../../store';
+	import type { MouseEventHandler } from 'svelte/elements';
 
 	export let langs: ILang[] = [
 		{
@@ -27,6 +29,14 @@
 		worldMapSvg.setAttribute('fill', $darkMode ? 'gray' : '#262626');
 	}
 
+	const handleMouseMove: MouseEventHandler<HTMLDivElement> = throttle((e) => {
+		const { offsetX, offsetY } = e;
+		const { height, width } = e.currentTarget.getBoundingClientRect();
+		const tX = Math.trunc((-offsetX + width / 2) / 2);
+		const tY = Math.trunc((-offsetY + height / 2) / 2);
+		e.currentTarget.style.transform = `matrix( 2, 0, 0, 2, ${tX}, ${tY})`;
+	}, 0.1);
+
 	$: if (browser) {
 		tick().then(() => {
 			langs
@@ -41,22 +51,27 @@
 	}
 </script>
 
-<div class="stats shadow w-full stats-vertical lg:stats-horizontal">
+<div class="stats shadow w-full">
 	<div class="stat p-0">
-		<div class="stat-figure text-primary w-60 hidden sm:grid hover:scale-150 transition transform-gpu overflow-hidden">
-			<!-- <embed src="/worldmap.svg" bind:this={world}  /> -->
+		<!-- svelte-ignore a11y-no-static-element-interactions -->
+		<div
+			class="stat-figure text-primary w-60 hidden absolute sm:grid transform-gpu transition overflow-y-hidden"
+			on:mousemove={handleMouseMove}
+			on:mouseleave={(e) => (e.currentTarget.style.transform = '')}
+		>
 			<Worldmap bind:worldMapSvg />
 		</div>
-		<!-- <div class="stat-title capitalize text-center h-fit">Langues</div> -->
-		<div class="p-4">
+		<div class="stats w-min stats-vertical">
 			{#each langs as lang}
-				<div class="stat-value text-lg capitalize">
-					{lang.name}
-					{#if lang.comment}
-						<div class="stat-desc">
-							{lang.comment}
-						</div>
-					{/if}
+				<div class="stat py-">
+					<div class="stat-value text-lg capitalize">
+						{lang.name}
+						{#if lang.comment}
+							<div class="stat-desc">
+								{lang.comment}
+							</div>
+						{/if}
+					</div>
 				</div>
 			{/each}
 		</div>
