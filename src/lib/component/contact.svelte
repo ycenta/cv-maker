@@ -33,7 +33,7 @@
 	};
 </script>
 
-<div class="flex flex-col lg:flex-row w-full justify-around lg:items-center">
+<div class="flex flex-col sm:flex-row flex-wrap w-full justify-around sm:items-center">
 	<div>
 		<h4 class="mx-2 mt-2 font-medium text-sm text-gray-800 dark:text-gray-200">
 			{contactInfo.name}

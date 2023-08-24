@@ -32,9 +32,11 @@
 
 <div class="py-0 dark:bg-base-100 shadow-sm rounded-sm navbar">
 	<Title {...data} />
-	<div class="flex flex-col lg:flex-row w-full items-end">
+	<div class="flex flex-col sm:flex-row w-full">
 		<Contact {...data} />
-		<Options />
+		<div class="self-end">
+			<Options />
+		</div>
 	</div>
 </div>
 <div class="hero grow pt-1">
