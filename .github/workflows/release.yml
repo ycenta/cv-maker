@@ -25,6 +25,8 @@ jobs:
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 
       - name: release-it
-        uses: TheRealWaldo/release-it@v0.7.2
-        with:
-          json-opts: '{"dry-run": true}'
+        run: |
+          npm install --no-save release-it @release-it/conventional-changelog
+          npm run release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
