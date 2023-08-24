@@ -90,7 +90,7 @@
 				</div>
 			</li>
 			<dialog id={item.enterprise} class="modal modal-bottom sm:modal-middle">
-				<form method="dialog" class="modal-box">
+				<form method="dialog" class="modal-box max-h-[70vh]">
 					<button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
 					<h3 class="font-bold text-lg text-center">Missions : {item.enterprise}</h3>
 					<ul class="ml-4 mt-4">

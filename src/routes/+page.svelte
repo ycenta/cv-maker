@@ -48,7 +48,7 @@
 		<div class="px-2 self-start w-full" style="grid-area: experience;">
 			<Experience experience={$experiences} />
 		</div>
-		<div class="divider lg:hidden"></div>
+		<div class="divider lg:hidden mx-2"></div>
 		<div class="px-2 self-start w-full" style="grid-area: education;">
 			<Education {...data} />
 			<div class="divider"></div>
