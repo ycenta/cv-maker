@@ -1,5 +1,21 @@
 
 
+# [0.2.0](https://github.com/MohammadBnei/cv-maker/compare/0.1.0...0.2.0) (2023-08-24)
+
+
+### Bug Fixes
+
+* **accessibility:** adding aria label to btn ([6762f2c](https://github.com/MohammadBnei/cv-maker/commit/6762f2cd90f7d05e0bc1643c336572e8fdf482a1))
+* **skills:** made skill badge text larger ([9e19910](https://github.com/MohammadBnei/cv-maker/commit/9e19910a53d37127c1bada1a5b00833e398fb3ee))
+
+
+### Features
+
+* **data:** added gcp to skills and missions ([62509c4](https://github.com/MohammadBnei/cv-maker/commit/62509c427d3ee82afc11c4064adee612a11bf5db))
+* **hobby.svelte:** add conditional rendering for hobby.svg to display an avatar image if it exists ([f1a81fb](https://github.com/MohammadBnei/cv-maker/commit/f1a81fb35c62c4c404a031ed856f9d84fe34eae9))
+* **static:** website now fully prerendered and static ([9b2d09a](https://github.com/MohammadBnei/cv-maker/commit/9b2d09a001eccf51a6e601b944c25ba563d98660))
+* **worldmap:** interaction with worldmap on point ([234c500](https://github.com/MohammadBnei/cv-maker/commit/234c50073bcd926f0bfee4fbc1c9de4ee3fed016))
+
 # 0.1.0 (2023-08-24)
 
 
