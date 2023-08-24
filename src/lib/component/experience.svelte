@@ -56,7 +56,7 @@
 						document.getElementById(`${item.enterprise}-modal`)?.click()}
 					on:keyup={(k) =>
 						k.key === 'Enter' && document.getElementById(`${item.enterprise}-modal`)?.click()}
-					aria-controls="show details"
+					aria-label="open details"
 					role="button"
 					tabindex="0"
 				>
