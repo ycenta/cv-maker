@@ -5,7 +5,7 @@
 	import 'dayjs/locale/fr';
 	import 'dayjs/locale/en';
 	import { page } from '$app/stores';
-	import { fly, slide } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 
 	$: $page.url.pathname.includes('en') ? dayjs.locale('en') : dayjs.locale('fr');
 </script>
