@@ -236,7 +236,7 @@ export const experience: IExperience[] = [
 					{ name: 'sveltekit', category: 'frontend' },
 					{ name: 'mongodb', category: 'data' },
 					{ name: 'mysql', category: 'data' },
-          { name: 'elk', category: 'data' },
+					{ name: 'elk', category: 'data' }
 				]
 			},
 			{
@@ -254,16 +254,11 @@ export const experience: IExperience[] = [
 			},
 			{
 				title: 'Management',
-				description: `Prise en charge du management de l'équipe (1 personne).`,
+				description: `Prise en charge du management de l'équipe (1 personne). Gestion des ressources, priorisation des tâches.`,
 				skills: [
 					{ name: 'git', category: 'other' },
 					{ name: 'kanban', category: 'other' }
 				]
-			},
-			{
-				title: 'Gestion',
-				description: `Gestion des ressources, priorisation des tâches.`,
-				skills: []
 			}
 		]
 	}
