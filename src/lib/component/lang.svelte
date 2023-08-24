@@ -55,13 +55,13 @@
 	<div class="stat p-0">
 		<!-- svelte-ignore a11y-no-static-element-interactions -->
 		<div
-			class="stat-figure text-primary w-60 hidden absolute sm:grid transform-gpu transition overflow-y-hidden"
+			class="stat-figure text-primary w-60 hidden absolute lg:grid hover:z-20 transform-gpu transition overflow-y-hidden"
 			on:mousemove={handleMouseMove}
 			on:mouseleave={(e) => (e.currentTarget.style.transform = '')}
 		>
 			<Worldmap bind:worldMapSvg />
 		</div>
-		<div class="stats sm:w-min stats-vertical">
+		<div class="stats sm:w-min stats-vertical z-10">
 			{#each langs as lang}
 				<div class="stat py-">
 					<div class="stat-value text-lg capitalize">
