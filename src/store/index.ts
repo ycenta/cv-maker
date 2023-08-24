@@ -82,3 +82,5 @@ const experiencesStore = () => {
 };
 
 export const experiences = experiencesStore();
+
+export const darkMode = writable(false);

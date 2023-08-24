@@ -7,7 +7,11 @@
 </script>
 
 <script lang="ts">
+	import { browser } from '$app/environment';
 	import { tick } from 'svelte';
+
+	import Worldmap from './ui/svg/worldmap.svelte';
+	import { darkMode } from '../../store';
 
 	export let langs: ILang[] = [
 		{
@@ -17,28 +21,31 @@
 		}
 	];
 
-	let world: HTMLEmbedElement;
+	let worldMapSvg: SVGElement;
 
-	$: if (world) {
+	$: if (worldMapSvg) {
+		worldMapSvg.setAttribute('fill', $darkMode ? 'gray' : '#262626');
+	}
+
+	$: if (browser) {
 		tick().then(() => {
-			const doc = world.getSVGDocument();
-			if (doc)
-				langs
-					.flatMap(({ codes }) => codes)
-					.map((c) => {
-						const country = doc.querySelector(`[cc=${c}]`);
-						if (country) {
-							(country as any).style.fill = 'gray';
-						}
-					});
+			langs
+				.flatMap(({ codes }) => codes)
+				.map((code) => {
+					const path = document.getElementById(code);
+					if (path) {
+						path.style.fill = $darkMode ? 'white' : '#A6A6A6';
+					}
+				});
 		});
 	}
 </script>
 
 <div class="stats shadow w-full stats-vertical lg:stats-horizontal">
 	<div class="stat p-0">
-		<div class="stat-figure text-primary w-60 hidden sm:grid" >
-			<embed src="/worldmap.svg" bind:this={world} type="image/svg+xml" />
+		<div class="stat-figure text-primary w-60 hidden sm:grid hover:scale-150 transition transform-gpu overflow-hidden">
+			<!-- <embed src="/worldmap.svg" bind:this={world}  /> -->
+			<Worldmap bind:worldMapSvg />
 		</div>
 		<!-- <div class="stat-title capitalize text-center h-fit">Langues</div> -->
 		<div class="p-4">

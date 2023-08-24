@@ -16,19 +16,12 @@
 	$: experiences.set(data.experience);
 
 	let metaData: Partial<IMetaTagProperties> = {
-		title: 'CV de Mohammad-Amine Banaei',
+		title: 'CV - ' + data.contactInfo.name,
 		description:
 			'Bienvenue sur mon CV en ligne. Vous trouverez ici toutes les informations concernant mes expériences, compétences, formations et coordonnées. N’hésitez pas à me contacter pour toute proposition ou pour plus d’informations.',
 		url: `https://cv.bnei.dev`,
 		logoUrl: 'https://cv.bnei.dev/favicon-32x32.png',
-		keywords: [
-			'CV',
-			'Mohammad-Amine Banaei',
-			'Expérience',
-			'Compétences',
-			'Formation',
-			...data.skills.map((skill) => skill.name)
-		],
+		keywords: ['CV', data.contactInfo.name, ...data.skills.map((skill) => skill.name)],
 		searchUrl: `https://cv.bnei.dev`,
 		image: 'https://cv.bnei.dev/android-chrome-192x192.png',
 		sitemapUrl: 'https://cv.bnei.dev/sitemap.xml'
@@ -37,14 +30,14 @@
 
 <HeadTags {metaData} />
 
-<div class="py-0 dark:bg-neutraldark:bg-neutral-800 shadow-sm rounded-sm navbar">
+<div class="py-0 dark:bg-base-100 shadow-sm rounded-sm navbar">
 	<Title {...data} />
 	<div class="flex flex-col lg:flex-row w-full">
 		<Contact {...data} />
 		<Options />
 	</div>
 </div>
-<div class="hero dark:bg-base-300 min-h-screen pt-1">
+<div class="hero grow pt-1">
 	<div class="text-center lg:text-left desktop-grid w-screen h-full place-items-center gap-2">
 		<!-- <div style="grid-area: picture;">
 			<img src="/photo_cv.jpg" alt="Mohammad-Amine Banaei" class="mask mask-squircle w-32" />

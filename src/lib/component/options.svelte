@@ -22,16 +22,21 @@
 	$: if ($selectedSkills.length === 0) reset = true;
 </script>
 
-<ul class="menu lg:menu-vertical menu-horizontal lg:w-min lg:h-20 lg:justify-center lg:py-1">
+<ul class="menu lg:menu-vertical menu-horizontal lg:w-min lg:h-24 lg:justify-center lg:py-1">
 	{#if browser}
 		<li>
-			<DarkModeBtn width={20} />
+			<DarkModeBtn width={22} />
 		</li>
 	{/if}
 	{#if $selectedSkills.length > 0}
 		<li class:animate-bounce={pulse}>
-			<a transition:slide on:click|preventDefault={() => selectedSkills.reset()} href="/">
-				<FilterMinus width={20} />
+			<a
+				transition:slide
+				on:click|preventDefault={() => selectedSkills.reset()}
+				href="/"
+				class="p-2"
+			>
+				<FilterMinus width={22} />
 			</a>
 		</li>
 	{/if}
