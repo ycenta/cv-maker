@@ -41,7 +41,7 @@
 			<div class="card bg-stone-200 dark:bg-stone-600 shadow-xl rounded-sm">
 				<div class="card-body p-2">
 					<div class="collapse collapse-arrow">
-						<input type="checkbox" />
+						<input aria-label="collapse education details" type="checkbox" />
 						<div class="collapse-title items-center flex justify-between">
 							<h3 class="font-semibold card-title text-sm text-left">
 								{item.school}
