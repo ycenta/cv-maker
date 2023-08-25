@@ -1,5 +1,12 @@
 
 
+# [0.6.0](https://github.com/MohammadBnei/cv-maker/compare/0.5.1...0.6.0) (2023-08-25)
+
+
+### Features
+
+* **options.svelte:** add download button to options component for downloading files in pdf and mhtml format ([3b3ff60](https://github.com/MohammadBnei/cv-maker/commit/3b3ff60a2f99f9eb8ffa12d6b4ffa0ac4fffa0c1))
+
 ## [0.5.1](https://github.com/MohammadBnei/cv-maker/compare/0.5.0...0.5.1) (2023-08-25)
 
 # [0.5.0](https://github.com/MohammadBnei/cv-maker/compare/0.4.0...0.5.0) (2023-08-25)
