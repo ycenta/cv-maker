@@ -24,4 +24,6 @@
 	</div>
 {/key}
 
-<Footer />
+{#if !$snapshotMode}
+	<Footer />
+{/if}

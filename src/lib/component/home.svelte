@@ -8,6 +8,7 @@
 	import Skill, { type ISkill } from '$lib/component/skill.svelte';
 	import Title, { type ITitle } from '$lib/component/title.svelte';
 	import { experiences, snapshotMode } from '../../store';
+	import OpenIn from './ui/svg/openIn.svelte';
 
 	export let experience: IExperience[];
 	export let education: IEducation[];
@@ -28,7 +29,13 @@
 			<div class="self-end">
 				<Options />
 			</div>
-			{/if}
+		{:else}
+			<div class="self-center">
+				<a href="http://cv.bnei.dev" class="btn btn-ghost">
+					<OpenIn width={22} />
+				</a>
+			</div>
+		{/if}
 	</div>
 </div>
 <div class="hero grow pt-1 pb-2">

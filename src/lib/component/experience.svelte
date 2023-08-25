@@ -44,7 +44,7 @@
 	];
 </script>
 
-<div class="lg:columns-2">
+<div class={$snapshotMode ? '' : 'lg:columns-2'}>
 	<ol class="relative border-l-2 border-lime-200 dark:border-green-700">
 		{#each experience.sort((a, b) => b.endDate.getTime() - a.endDate.getTime()) as item, i}
 			<li class="ml-4 {i !== 0 ? 'mt-2' : ''} break-inside-avoid" transition:fly>
