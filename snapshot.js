@@ -1,12 +1,11 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 // import puppeteer, { Page } from 'puppeteer';
 // import fs from 'fs';
+const url = process.argv[1] || 'https://cv.bnei.dev';
+const path = process.argv[2] || './gen';
 
 const puppeteer = require('puppeteer');
 const fs = require('fs');
-
-const url = process.argv[2] || 'https://cv.bnei.dev';
-const path = process.argv[3] || './gen';
 
 (async () => {
 	// Launch the browser and open a new blank page
