@@ -22,7 +22,7 @@ jobs:
 
       - name: snap
         run: |
-          mkdir gen
+          mkdir -m 666 gen
           docker run -i --init --cap-add=SYS_ADMIN -v ./gen:/home/pptruser/gen ghcr.io/puppeteer/puppeteer:latest node -e "$(cat snapshot.js)" https://cv.bnei.dev ./gen
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
