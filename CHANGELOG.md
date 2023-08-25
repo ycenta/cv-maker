@@ -1,5 +1,12 @@
 
 
+# [0.4.0](https://github.com/MohammadBnei/cv-maker/compare/0.3.0...0.4.0) (2023-08-25)
+
+
+### Features
+
+* **lots:** updated snapshot view. adding snapshot github action workflow ([0064e40](https://github.com/MohammadBnei/cv-maker/commit/0064e40f8903e350053450232641ca037305648a))
+
 # [0.3.0](https://github.com/MohammadBnei/cv-maker/compare/0.2.4...0.3.0) (2023-08-25)
 
 
