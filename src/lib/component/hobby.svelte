@@ -17,7 +17,7 @@
 
 <div class="stats shadow stats-vertical lg:stats-horizontal w-full">
 	{#each hobbies as hobby}
-		<div class="stat">
+		<div class="stat lg:w-52">
 			{#if hobby.svg}
 				<!-- content here -->
 				<div class="stat-figure justify-self-center flex flex-col justify-center  text-secondary">

@@ -14,6 +14,7 @@
 
 <script lang="ts">
 	import { formatDate } from '$lib/utils';
+	import { snapshotMode } from '../../store';
 	import Badge from './ui/badge.svelte';
 
 	export let education: IEducation[] = [
@@ -40,7 +41,7 @@
 			</time>
 			<div class="card bg-stone-200 dark:bg-stone-600 shadow-xl rounded-sm">
 				<div class="card-body p-2">
-					<div class="collapse collapse-arrow">
+					<div class="collapse {$snapshotMode ? 'collapse-open' : 'collapse-arrow'}">
 						<input aria-label="collapse education details" type="checkbox" />
 						<div class="collapse-title items-center flex justify-between">
 							<h3 class="font-semibold card-title text-sm text-left">

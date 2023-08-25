@@ -1,0 +1,32 @@
+name: Snapshot to PDF & MHTML
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.5.3
+        with:
+          fetch-depth: 0
+
+      - name: git config
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+
+      - name: snap
+        run: |
+          mkdir gen
+          docker run -i --init --cap-add=SYS_ADMIN -v ./gen:/gen ghcr.io/puppeteer/puppeteer:latest node -e "$(cat snapshot.js)" https://cv.bnei.dev /gen
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: snap
+          path: gen/cv.pdf

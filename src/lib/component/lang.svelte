@@ -12,7 +12,7 @@
 	import { throttle } from '@sveu/shared';
 
 	import Worldmap from './ui/svg/worldmap.svelte';
-	import { darkMode } from '../../store';
+	import { darkMode, snapshotMode } from '../../store';
 	import type { MouseEventHandler } from 'svelte/elements';
 
 	export let langs: ILang[] = [
@@ -44,7 +44,7 @@
 				.map((code) => {
 					const path = document.getElementById(code);
 					if (path) {
-						path.style.fill = $darkMode ? 'white' : '#A6A6A6';
+						path.style.fill = $darkMode ? 'white' : '#F2BF5E';
 					}
 				});
 		});
@@ -52,16 +52,18 @@
 </script>
 
 <div class="stats shadow w-full">
-	<div class="stat p-0">
+	<div class="stat p-0 justify-between">
 		<!-- svelte-ignore a11y-no-static-element-interactions -->
 		<div
-			class="stat-figure text-primary w-60 hidden absolute lg:grid hover:z-20 transform-gpu transition overflow-y-hidden"
+			class="stat-figure text-primary {$snapshotMode
+				? 'w-72'
+				: 'w-60'} hidden absolute sm:grid hover:z-20 transform-gpu transition overflow-y-hidden"
 			on:mousemove={handleMouseMove}
 			on:mouseleave={(e) => (e.currentTarget.style.transform = '')}
 		>
 			<Worldmap bind:worldMapSvg />
 		</div>
-		<div class="stats sm:w-min stats-vertical z-10">
+		<div class="stats sm:w-1/3 stats-vertical z-10">
 			{#each langs as lang}
 				<div class="stat py-">
 					<div class="stat-value text-lg capitalize">

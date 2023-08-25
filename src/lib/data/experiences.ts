@@ -140,7 +140,8 @@ export const experience: IExperience[] = [
 					{ name: 'hapi', category: 'backend' },
 					{ name: 'reactjs', category: 'frontend' },
 					{ name: 'mongodb', category: 'data' }
-				]
+				],
+				snapshot: true
 			},
 			{
 				title: 'Visuel',
@@ -155,7 +156,8 @@ export const experience: IExperience[] = [
 					{ name: 'hapi', category: 'backend' },
 					{ name: 'reactjs', category: 'frontend' },
 					{ name: 'redis', category: 'data' }
-				]
+				],
+				snapshot: true
 			},
 			{
 				title: 'MAJ React',
@@ -184,7 +186,8 @@ export const experience: IExperience[] = [
 					{ name: 'kubernetes', category: 'devops' },
 					{ name: 'docker', category: 'devops' },
 					{ name: 'gcp', category: 'system' }
-				]
+				],
+				snapshot: true
 			},
 			{
 				title: 'Solutions CI/CD',
@@ -197,12 +200,14 @@ export const experience: IExperience[] = [
 					{ name: 'docker', category: 'devops' },
 					{ name: 'ansible', category: 'devops' },
 					{ name: 'gcp', category: 'system' }
-				]
+				],
+				snapshot: true
 			},
 			{
 				title: 'Golang',
 				description: `Introduction au langage de programation Golang.`,
-				skills: [{ name: 'golang', category: 'backend' }]
+				skills: [{ name: 'golang', category: 'backend' }],
+				snapshot: true
 			},
 			{
 				title: 'React',
@@ -221,7 +226,7 @@ export const experience: IExperience[] = [
 		position: 'Entrepreneur',
 		startDate: new Date('2020-09-01'),
 		endDate: new Date('2030-07-01'),
-		description: `Création d'une application permettant d'enrichir son vocabulaire en apprenant de nouveaux mots.`,
+		description: `Création d'une application permettant d'enrichir son vocabulaire en apprenant de nouveaux mots.  <a href="https://voconsteroid.com" class="link ml-4"><img src="https://voconsteroid.com/voconsteroidLogoNT384.png" alt="voconsteroid" class="inline w-10" /> voconsteroid.com</a>`,
 		missions: [
 			{
 				title: 'Architecture',
@@ -230,7 +235,8 @@ export const experience: IExperience[] = [
 					{ name: 'microservices', category: 'devops' },
 					{ name: 'gcp', category: 'system' },
 					{ name: 'bare metal', category: 'system' }
-				]
+				],
+				snapshot: true
 			},
 			{
 				title: 'Développement',
@@ -243,7 +249,8 @@ export const experience: IExperience[] = [
 					{ name: 'mongodb', category: 'data' },
 					{ name: 'mysql', category: 'data' },
 					{ name: 'elk', category: 'data' }
-				]
+				],
+				snapshot: true
 			},
 			{
 				title: 'DevOps',
@@ -256,7 +263,8 @@ export const experience: IExperience[] = [
 					{ name: 'tls', category: 'devops' },
 					{ name: 'kong', category: 'devops' },
 					{ name: 'traefik', category: 'devops' }
-				]
+				],
+				snapshot: true
 			},
 			{
 				title: 'Management',

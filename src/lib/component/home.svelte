@@ -8,6 +8,7 @@
 	import Skill, { type ISkill } from '$lib/component/skill.svelte';
 	import Title, { type ITitle } from '$lib/component/title.svelte';
 	import { experiences, snapshotMode } from '../../store';
+	import BonusIcons from './bonusIcons.svelte';
 	import OpenIn from './ui/svg/openIn.svelte';
 
 	export let experience: IExperience[];
@@ -21,7 +22,7 @@
 	$: experiences.set(experience);
 </script>
 
-<div class="py-0 dark:bg-base-100 shadow-sm rounded-sm navbar">
+<div class="py-0 dark:bg-base-100 shadow-sm rounded-sm navbar {$snapshotMode ? 'py-6' : ''}">
 	<Title {title} />
 	<div class="flex flex-col sm:flex-row w-full">
 		<Contact {contactInfo} />
@@ -31,8 +32,9 @@
 			</div>
 		{:else}
 			<div class="self-center">
-				<a href="http://cv.bnei.dev" class="btn btn-ghost">
+				<a href="http://cv.bnei.dev" class="btn btn-ghost lowercase link font-normal">
 					<OpenIn width={22} />
+					cv.bnei.dev
 				</a>
 			</div>
 		{/if}
@@ -43,23 +45,34 @@
 		<!-- <div style="grid-area: picture;">
 			<img src="/photo_cv.jpg" alt="Mohammad-Amine Banaei" class="mask mask-squircle w-32" />
 		</div> -->
-		<div class="my-2 flex justify-center self-start w-full" style="grid-area: skill;">
+		<div class="my-4 flex justify-center self-start w-full" style="grid-area: skill;">
 			<Skill {skills} />
 		</div>
 		<div class="px-2 self-start w-full" style="grid-area: experience;">
 			<Experience experience={$experiences} />
 		</div>
-		<div class="divider sm:hidden mx-2 my-1"></div>
+		<div class="divider sm:hidden mx-2 {$snapshotMode ? 'my-14' : 'my-1'}"></div>
 		<div class="px-2 self-start w-full" style="grid-area: education;">
 			<Education {education} />
-			<div class="divider my-1"></div>
+			<div class="divider {$snapshotMode ? 'my-14' : 'my-1'}"></div>
 			<Lang {langs} />
-			<div class="divider my-1"></div>
+			<div class="divider {$snapshotMode ? 'my-14' : 'my-1'}"></div>
 			<Hobby {hobbies} />
+			{#if $snapshotMode}
+				<!-- <div class="divider {$snapshotMode ? 'my-14' : 'my-1'}"></div> -->
+				<div class="mt-2">
+					<BonusIcons />
+				</div>
+			{/if}
 			<div class="mb-4 lg:mb-0"></div>
 		</div>
 	</div>
 </div>
+{#if !$snapshotMode}
+	<div class="ml-2 pt-2 pb-12 sm:pb-2">
+		<BonusIcons />
+	</div>
+{/if}
 
 <style>
 	@media (min-width: 1024px) {

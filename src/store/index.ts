@@ -4,10 +4,6 @@ import { writable } from 'svelte/store';
 
 export const snapshotMode = writable(false);
 
-snapshotMode.subscribe((mode) => {
-	console.log({ mode });
-});
-
 const selectedSkillStore = () => {
 	const { set, update, subscribe } = writable<ISkill[]>([]);
 

@@ -12,6 +12,7 @@
 			skills: ISkill[];
 			description: string;
 			title: string;
+			snapshot?: boolean;
 		}[];
 	}
 </script>
@@ -71,15 +72,10 @@
 						</h3>
 						<div class="flex gap-2 items-center">
 							<p class="text-sm font-normal">
-								{item.description}
+								{@html item.description}
 							</p>
-							<!-- <div class="flex flex-wrap">
-							{#each item.missions.map(({ skills }) => skills).reduce(reduceSkills, []) as skill}
-							<Badge content={skill.content} color={skill.color} />
-							{/each}
-						</div> -->
+
 							{#if !$snapshotMode}
-								<!-- content here -->
 								<div class="tooltip tooltip-left" data-tip="Détails de la mission">
 									<button
 										aria-label="details"
@@ -91,9 +87,31 @@
 								</div>
 							{/if}
 						</div>
+						{#if $snapshotMode}
+							<ul class="ml-4 mt-4">
+								{#each item.missions.filter(({ snapshot }) => snapshot) || [] as mission, i}
+									{#if i !== 0}
+										<div class="divider"></div>
+									{/if}
+									<li class="mb-2">
+										<h4 class="font-semibold mr-2">{mission.title}</h4>
+
+										<p class="mb-2 text-sm font-normal" >{mission.description}</p>
+										<div class="flex flex-wrap gap-2">
+											{#each mission.skills || [] as skill}
+												<SkillBadge {skill} />
+											{/each}
+										</div>
+									</li>
+								{/each}
+							</ul>
+						{/if}
 					</div>
 				</div>
 			</li>
+
+			<!-- Modal -->
+
 			<dialog id={item.enterprise} class="modal modal-bottom sm:modal-middle">
 				<form method="dialog" class="modal-box max-h-[70vh]">
 					<button

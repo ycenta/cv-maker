@@ -184,7 +184,8 @@ export const experience: IExperience[] = [
 					{ name: 'kubernetes', category: 'devops' },
 					{ name: 'docker', category: 'devops' },
 					{ name: 'gcp', category: 'system' }
-				]
+				],
+				snapshot: true
 			},
 			{
 				title: 'CI/CD Solutions',
@@ -197,12 +198,14 @@ export const experience: IExperience[] = [
 					{ name: 'docker', category: 'devops' },
 					{ name: 'ansible', category: 'devops' },
 					{ name: 'gcp', category: 'system' }
-				]
+				],
+				snapshot: true
 			},
 			{
 				title: 'Golang',
 				description: `Introduction to the Golang programming language.`,
-				skills: [{ name: 'golang', category: 'backend' }]
+				skills: [{ name: 'golang', category: 'backend' }],
+				snapshot: true
 			},
 			{
 				title: 'React',
@@ -221,7 +224,7 @@ export const experience: IExperience[] = [
 		position: 'Entrepreneur',
 		startDate: new Date('2020-09-01'),
 		endDate: new Date('2030-07-01'),
-		description: `Creation of an application to enrich vocabulary by learning new words.`,
+		description: `Creation of an application to enrich vocabulary by learning new words.   <a href="https://voconsteroid.com" class="link ml-4"><img src="https://voconsteroid.com/voconsteroidLogoNT384.png" alt="voconsteroid" class="inline w-10" /> voconsteroid.com</a>`,
 		missions: [
 			{
 				title: 'Architecture',
@@ -230,7 +233,8 @@ export const experience: IExperience[] = [
 					{ name: 'microservices', category: 'devops' },
 					{ name: 'gcp', category: 'system' },
 					{ name: 'bare metal', category: 'system' }
-				]
+				],
+				snapshot: true
 			},
 			{
 				title: 'Development',
@@ -243,7 +247,8 @@ export const experience: IExperience[] = [
 					{ name: 'mongodb', category: 'data' },
 					{ name: 'mysql', category: 'data' },
 					{ name: 'elk', category: 'data' }
-				]
+				],
+				snapshot: true
 			},
 			{
 				title: 'DevOps',
@@ -256,7 +261,8 @@ export const experience: IExperience[] = [
 					{ name: 'tls', category: 'devops' },
 					{ name: 'kong', category: 'devops' },
 					{ name: 'traefik', category: 'devops' }
-				]
+				],
+				snapshot: true
 			},
 			{
 				title: 'Management',
