@@ -1,5 +1,20 @@
 
 
+# [0.5.0](https://github.com/MohammadBnei/cv-maker/compare/0.4.0...0.5.0) (2023-08-25)
+
+
+### Bug Fixes
+
+* **release.yml:** change destination directory of generated snapshots from 'snapshots' to 'src/static' to match project structure ([fb66355](https://github.com/MohammadBnei/cv-maker/commit/fb66355d571af183c3729c797ea9573b52fba03e))
+* **release.yml:** change destination directory of generated snapshots from 'snapshots' to 'src/static' to match project structure ([53cd0c0](https://github.com/MohammadBnei/cv-maker/commit/53cd0c048302232208a4cb60555279f58870f70f))
+* **snapshot.yml:** update the path for the output directory in the docker run command to "./gen" instead of "/gen" to ensure snapshots are generated in the correct location ([7edba90](https://github.com/MohammadBnei/cv-maker/commit/7edba90bf4287a8d03aeb1674f1fb20e2e847d21))
+* **snapshot.yml:** update the path for the output directory in the docker run command to "./gen" instead of "/gen" to ensure snapshots are generated in the correct location ([07fe063](https://github.com/MohammadBnei/cv-maker/commit/07fe0632e26345cc6f35b3b042eeae42884e87af))
+
+
+### Features
+
+* **release.yml:** add static folder to git staging area before committing to include generated files in the snapshot ([436d536](https://github.com/MohammadBnei/cv-maker/commit/436d536f6d5bfcc1aa596ea92e61cd194aee5da1))
+
 # [0.4.0](https://github.com/MohammadBnei/cv-maker/compare/0.3.0...0.4.0) (2023-08-25)
 
 
