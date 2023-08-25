@@ -16,7 +16,7 @@ on:
   # workflow_dispatch:
 
 jobs:
-  deploy:
+  deploy-snapshot-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,25 +26,13 @@ jobs:
         with:
           run_install: false
           version: 8
-          
+
       - name: Install Vercel CLI
         run: pnpm install --global vercel@latest
 
       - name: Pull Vercel Environment Information
         run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
-      - name: Build Project Artifacts
-        run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
-      - name: Deploy Project Artifacts to Vercel
-        run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
 
-  snapshot:
-    runs-on: ubuntu-latest
-    needs: deploy
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3.5.3
-        with:
-          fetch-depth: 0
 
       - name: git config
         run: |
@@ -59,13 +47,17 @@ jobs:
           git add static
           git commit -s -m "snapshot ${{ github.sha }}"
           git push
-
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Build Project Artifacts
+        run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Deploy Project Artifacts to Vercel
+        run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+
   release:
     runs-on: ubuntu-latest
-    needs: snapshot
+    needs: deploy-snapshot-deploy
     steps:
       - name: Checkout
         uses: actions/checkout@v3.5.3
