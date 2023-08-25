@@ -50,7 +50,7 @@ jobs:
       - name: Install PM2
         run: npm install pm2 -g
       - name: Start server
-        run: pm2 start build
+        run: NODE_PORT=4173 pm2 start build
 
       - name: snap
         run: |
