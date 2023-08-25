@@ -1,5 +1,12 @@
 
 
+# [0.3.0](https://github.com/MohammadBnei/cv-maker/compare/0.2.4...0.3.0) (2023-08-25)
+
+
+### Features
+
+* **snapshot:** improving snapshot mode. Removed footer, added open in svg for pdf and made the experiences in one list ([39befd6](https://github.com/MohammadBnei/cv-maker/commit/39befd6a82160422a70989f0e58195657e41062e))
+
 ## [0.2.4](https://github.com/MohammadBnei/cv-maker/compare/0.2.3...0.2.4) (2023-08-24)
 
 ## [0.2.3](https://github.com/MohammadBnei/cv-maker/compare/0.2.2...0.2.3) (2023-08-24)
