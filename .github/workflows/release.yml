@@ -22,9 +22,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3.5.3
   
-      - name: Decompress node_modules 
-        run: tar -xf node_modules.tar.gz
-
       - name: Setup pnpm
         uses: pnpm/action-setup@v2.4.0
         with:
