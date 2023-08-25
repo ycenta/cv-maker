@@ -15,9 +15,9 @@
 	];
 </script>
 
-<div class="stats shadow stats-vertical lg:stats-horizontal w-full">
+<div class="stats shadow stats-vertical  w-full">
 	{#each hobbies as hobby}
-		<div class="stat lg:w-52">
+		<div class="stat">
 			{#if hobby.svg}
 				<!-- content here -->
 				<div class="stat-figure justify-self-center flex flex-col justify-center  text-secondary">

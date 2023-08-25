@@ -52,7 +52,7 @@
 			<Experience experience={$experiences} />
 		</div>
 		<div class="divider sm:hidden mx-2 {$snapshotMode ? 'my-14' : 'my-1'}"></div>
-		<div class="px-2 self-start w-full" style="grid-area: education;">
+		<div class="px-2 self-center w-full" style="grid-area: education;">
 			<Education {education} />
 			<div class="divider {$snapshotMode ? 'my-14' : 'my-1'}"></div>
 			<Lang {langs} />
