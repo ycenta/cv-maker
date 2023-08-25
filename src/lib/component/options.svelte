@@ -7,6 +7,9 @@
 	import { page } from '$app/stores';
 	import Fr from './ui/svg/fr.svelte';
 	import Uk from './ui/svg/uk.svelte';
+	import Pdf from './ui/svg/pdf.svelte';
+	import Html from './ui/svg/html.svelte';
+	import Download from './ui/svg/download.svelte';
 
 	let pulseCount = 0;
 	let pulse = false;
@@ -55,5 +58,43 @@
 				</a>
 			</li>
 		{/if}
+		<li>
+			<a href="#" on:click|preventDefault={() => document.getElementById('dl-dialog')?.showModal()}>
+				<Download width={22} />
+			</a>
+		</li>
 	</ul>
 </div>
+<dialog id="dl-dialog" class="modal">
+	<form method="dialog" class="modal-box">
+		<p class="py-4">
+			{$page.url.pathname.includes('en')
+				? 'Download in pdf or mhtml (recommended) format'
+				: 'Télécharger au format pdf ou mhtml (recommandé)'}
+		</p>
+		<div class="flex justify-center gap-8">
+			<a
+				href={$page.url.pathname.includes('en') ? '/cv.pdf' : '/cv-en.pdf'}
+				class="btn btn-ghost"
+				download
+			>
+				<Pdf width={22} />
+			</a>
+			<a
+				href={$page.url.pathname.includes('en') ? '/cv.mhtml' : '/cv-en.mhtml'}
+				class="btn btn-ghost"
+				download
+			>
+				<Html width={22} />
+			</a>
+		</div>
+		<div class="modal-action">
+			<button class="btn" id="dl-close-btn"
+				>{$page.url.pathname.includes('en') ? 'Close' : 'Fermer'}</button
+			>
+		</div>
+	</form>
+	<form method="dialog" class="modal-backdrop">
+		<button>close</button>
+	</form>
+</dialog>
