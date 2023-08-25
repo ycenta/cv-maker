@@ -33,6 +33,7 @@ jobs:
           mv gen/* snapshots/
           git commit -s -m "snapshot {{ github.sha }}"
           git push
+          
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
