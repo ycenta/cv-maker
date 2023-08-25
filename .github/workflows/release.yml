@@ -27,13 +27,18 @@ jobs:
         with:
           run_install: true
           version: 8
+      
+          
+
+      - name: Compress node_modues
+        run: tar -cf node_modules.tar.gz node_modules
 
       - name: 'Upload Node Modules'
         uses: actions/upload-artifact@v3
         with:
-          name: node_modules
-          path: node_modules
-          retention-days: 90
+          name: node_modules.tar.gz
+          path: node_modules.tar.gz
+          retention-days: 1
       
       - name: git config
         run: |
@@ -60,6 +65,14 @@ jobs:
       - uses: actions/checkout@v3.5.3
         with:
           ref: 'main'
+
+      - name: Download all workflow run artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: node_modules.tar.gz
+
+      - name: Decompress node_modules
+        run: tar -xf node_modules.tar.gz
 
       - name: Install Vercel CLI
         run: pnpm install --global vercel@latest
