@@ -2,7 +2,8 @@ name: Snapshot to PDF & MHTML
 
 on:
   release:
-    types: [published]
+    types: [released]
+  workflow_dispatch:
 
 jobs:
   release:
