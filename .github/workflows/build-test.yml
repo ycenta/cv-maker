@@ -1,0 +1,47 @@
+on:
+  push:
+    branches:
+      - '!main'
+    paths:
+      - '**/*.svelte'
+      - '**/*.ts'
+      - '**/*.json'
+      - '**/release.yml'
+  pull_request: 
+    paths:
+      - '**/*.svelte'
+      - '**/*.ts'
+      - '**/*.json'
+      - '**/release.yml'
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.5.3
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.4.0
+        with:
+          run_install: false
+          version: 8
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - run: pnpm install
+
+      - run: pnpm build
+
+      - name: test with curl
+        run: |
+          pnpm preview &
+          sleep 5
+          curl -v http://127.0.0.1:4173/ -I
