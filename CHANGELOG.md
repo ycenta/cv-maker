@@ -1,5 +1,12 @@
 
 
+# [0.7.0](https://github.com/MohammadBnei/cv-maker/compare/0.6.9...0.7.0) (2023-08-26)
+
+
+### Features
+
+* **workflows:** add build-test workflow to run build and test on push and pull request events ([a4d1bff](https://github.com/MohammadBnei/cv-maker/commit/a4d1bffa40c5763d54137c8412537916b744147e))
+
 ## [0.6.9](https://github.com/MohammadBnei/cv-maker/compare/0.6.8...0.6.9) (2023-08-26)
 
 ## [0.6.8](https://github.com/MohammadBnei/cv-maker/compare/0.6.7...0.6.8) (2023-08-26)
