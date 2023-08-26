@@ -1,16 +1,16 @@
 From: <Saved by Blink>
 Snapshot-Content-Location: http://127.0.0.1:4173/?snapshot
 Subject: CV - Mohammad-Amine BANAEI
-Date: Sat, 26 Aug 2023 10:39:40 -0000
+Date: Sat, 26 Aug 2023 10:44:46 -0000
 MIME-Version: 1.0
 Content-Type: multipart/related;
 	type="text/html";
-	boundary="----MultipartBoundary--mFgfSuPO0dhjBNK4AleqKIBV13NvepsWpuQVUkyjJb----"
+	boundary="----MultipartBoundary--e70CAIH1oI8arLbmRwg5dl4NLTooLLA8JbcAvQu5Eg----"
 
 
-------MultipartBoundary--mFgfSuPO0dhjBNK4AleqKIBV13NvepsWpuQVUkyjJb----
+------MultipartBoundary--e70CAIH1oI8arLbmRwg5dl4NLTooLLA8JbcAvQu5Eg----
 Content-Type: text/html
-Content-ID: <frame-3FD606E668744F8FF4342A72906EA372@mhtml.blink>
+Content-ID: <frame-8000057F7B4595B73FFCD44FE8F4259C@mhtml.blink>
 Content-Transfer-Encoding: quoted-printable
 Content-Location: http://127.0.0.1:4173/?snapshot
 
@@ -25,25 +25,25 @@ ttp-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
 		<link href=3D"http://127.0.0.1:4173/_app/immutable/assets/HeadTags.53b77b=
 e7.css" rel=3D"stylesheet">
 		<link rel=3D"modulepreload" href=3D"http://127.0.0.1:4173/_app/immutable/=
-entry/start.45418b22.js">
+entry/start.8343b8f8.js">
 		<link rel=3D"modulepreload" href=3D"http://127.0.0.1:4173/_app/immutable/=
 chunks/scheduler.bff07679.js">
 		<link rel=3D"modulepreload" href=3D"http://127.0.0.1:4173/_app/immutable/=
-chunks/singletons.e0ae8b0a.js">
+chunks/singletons.fbe2a356.js">
 		<link rel=3D"modulepreload" href=3D"http://127.0.0.1:4173/_app/immutable/=
-entry/app.815a5562.js">
+entry/app.bf544aac.js">
 		<link rel=3D"modulepreload" href=3D"http://127.0.0.1:4173/_app/immutable/=
 chunks/index.aaccf6ff.js">
 		<link rel=3D"modulepreload" href=3D"http://127.0.0.1:4173/_app/immutable/=
-nodes/0.b33dfa2d.js">
+nodes/0.5fd09674.js">
 		<link rel=3D"modulepreload" href=3D"http://127.0.0.1:4173/_app/immutable/=
-chunks/index.0575dfec.js">
+chunks/index.0d49ec5c.js">
 		<link rel=3D"modulepreload" href=3D"http://127.0.0.1:4173/_app/immutable/=
-chunks/stores.6b3e4fc3.js">
+chunks/stores.49d5636e.js">
 		<link rel=3D"modulepreload" href=3D"http://127.0.0.1:4173/_app/immutable/=
-nodes/2.07784ed3.js">
+nodes/2.7a01f834.js">
 		<link rel=3D"modulepreload" href=3D"http://127.0.0.1:4173/_app/immutable/=
-chunks/HeadTags.d23f00a3.js"><title>CV - Mohammad-Amine BANAEI</title><meta=
+chunks/HeadTags.1e7b1006.js"><title>CV - Mohammad-Amine BANAEI</title><meta=
  http-equiv=3D"x-ua-compatible" content=3D"IE=3Dedge,chrome=3D1"><meta name=
 =3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1"><meta nam=
 e=3D"robots" content=3D"index,follow"><meta name=3D"googlebot" content=3D"i=
@@ -72,7 +72,7 @@ itez pas =C3=A0 me contacter pour toute proposition ou pour plus d=E2=80=99=
 informations."><!-- HTML_TAG_START --><!-- HTML_TAG_END --><!-- HTML_TAG_ST=
 ART --><!-- HTML_TAG_END -->
 	<link rel=3D"modulepreload" as=3D"script" crossorigin=3D"" href=3D"http://=
-127.0.0.1:4173/_app/immutable/nodes/1.63250cd1.js"></head>
+127.0.0.1:4173/_app/immutable/nodes/1.b6fe910e.js"></head>
 	<body data-sveltekit-preload-data=3D"hover">
 		<div style=3D"display: contents"><div class=3D"min-h-screen dark:bg-base-=
 300"> <div class=3D"py-0 dark:bg-base-100 shadow-sm rounded-sm navbar py-6"=
@@ -2024,7 +2024,7 @@ n; white-space: nowrap; width: 1px; height: 1px;"></div></div>
 =09
 
 </body></html>
-------MultipartBoundary--mFgfSuPO0dhjBNK4AleqKIBV13NvepsWpuQVUkyjJb----
+------MultipartBoundary--e70CAIH1oI8arLbmRwg5dl4NLTooLLA8JbcAvQu5Eg----
 Content-Type: text/css
 Content-Transfer-Encoding: quoted-printable
 Content-Location: http://127.0.0.1:4173/_app/immutable/assets/0.e2e29aa4.css
@@ -3762,7 +3762,7 @@ b(38 38 38 / var(--tw-bg-opacity)); }
   .lg\:columns-2 { columns: 2; }
   .lg\:text-left { text-align: left; }
 }
-------MultipartBoundary--mFgfSuPO0dhjBNK4AleqKIBV13NvepsWpuQVUkyjJb----
+------MultipartBoundary--e70CAIH1oI8arLbmRwg5dl4NLTooLLA8JbcAvQu5Eg----
 Content-Type: text/css
 Content-Transfer-Encoding: quoted-printable
 Content-Location: http://127.0.0.1:4173/_app/immutable/assets/HeadTags.53b77be7.css
@@ -3864,7 +3864,7 @@ rgb(31 41 55 / var(--tw-bg-opacity)); }
   .desktop-grid.svelte-1ks3fm9 { display: grid; grid-template: "skill skill=
 " min-content "education experience" auto / 30% auto; gap: 0px; }
 }
-------MultipartBoundary--mFgfSuPO0dhjBNK4AleqKIBV13NvepsWpuQVUkyjJb----
+------MultipartBoundary--e70CAIH1oI8arLbmRwg5dl4NLTooLLA8JbcAvQu5Eg----
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Location: https://voconsteroid.com/voconsteroidLogoNT384.png
@@ -4014,7 +4014,7 @@ AABGEQAAYBQBAABGEQAAYBQBAABGEQAAYBQBAABGEQAAYBQBAABGEQAAYBQBAABGEQAAYBQBAABG
 EQAAYBQBAABGEQAAYBQBAABGEQAAYBQBAABGEQAAYBQBAABGEQAAYBQBAABGEQAAYBQBAABGEQAA
 YBQBAABGEQAAYBQBAABGEQAAYBQBAABGEQAAYFEURf8P1Rxy/6Nu9+AAAAAASUVORK5CYII=
 
-------MultipartBoundary--mFgfSuPO0dhjBNK4AleqKIBV13NvepsWpuQVUkyjJb----
+------MultipartBoundary--e70CAIH1oI8arLbmRwg5dl4NLTooLLA8JbcAvQu5Eg----
 Content-Type: image/svg+xml
 Content-Transfer-Encoding: quoted-printable
 Content-Location: http://127.0.0.1:4173/boxing-glove.svg
@@ -4036,7 +4036,7 @@ Content-Location: http://127.0.0.1:4173/boxing-glove.svg
 333c0 .92-1.221 1.208-2.326 1.208h-5C15.57 34 15 33.712 15 32.792v-3.333c0-=
 .921.57-1.459 1.674-1.459h5z"/>
 </svg>
-------MultipartBoundary--mFgfSuPO0dhjBNK4AleqKIBV13NvepsWpuQVUkyjJb----
+------MultipartBoundary--e70CAIH1oI8arLbmRwg5dl4NLTooLLA8JbcAvQu5Eg----
 Content-Type: image/svg+xml
 Content-Transfer-Encoding: quoted-printable
 Content-Location: http://127.0.0.1:4173/reading.svg
@@ -4053,7 +4053,7 @@ Content-Location: http://127.0.0.1:4173/reading.svg
 3-3-3z"/>
     </g>
 </svg>
-------MultipartBoundary--mFgfSuPO0dhjBNK4AleqKIBV13NvepsWpuQVUkyjJb----
+------MultipartBoundary--e70CAIH1oI8arLbmRwg5dl4NLTooLLA8JbcAvQu5Eg----
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Location: http://127.0.0.1:4173/strategy.png
@@ -4420,7 +4420,7 @@ FqIAAADQQhQAAABaiAIAAEALUQAAAGghCgAAAC1EAQAAoIUoAAAAtBAFAACAFqIAAADQQhQAAABa
 KJL0R+sQAABguFxVVdYZAADAkLEFAABAC1EAAABoIQoAAAAt9F9LL9PzoI2q/QAAAABJRU5ErkJg
 gg==
 
-------MultipartBoundary--mFgfSuPO0dhjBNK4AleqKIBV13NvepsWpuQVUkyjJb----
+------MultipartBoundary--e70CAIH1oI8arLbmRwg5dl4NLTooLLA8JbcAvQu5Eg----
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Location: http://127.0.0.1:4173/harmony.png
@@ -5213,4 +5213,4 @@ owdgNNkCABdQC1QaPRAhhBAJsQHoDzQbPRAjyQoANAHnksT1oIUQIonsB84jySd/kADgK+uAmqN/
 CyGE6JxqgWpgvdEDMQPZAmjLAVwCTAIGArmANIwXQghragV2AquBmag5X0l99O9Y/weMQl/eslRo
 8gAAAABJRU5ErkJggg==
 
-------MultipartBoundary--mFgfSuPO0dhjBNK4AleqKIBV13NvepsWpuQVUkyjJb------
+------MultipartBoundary--e70CAIH1oI8arLbmRwg5dl4NLTooLLA8JbcAvQu5Eg------
