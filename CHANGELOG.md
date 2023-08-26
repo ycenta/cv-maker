@@ -1,5 +1,12 @@
 
 
+## [0.6.3](https://github.com/MohammadBnei/cv-maker/compare/0.6.2...0.6.3) (2023-08-26)
+
+
+### Bug Fixes
+
+* **release.yml:** add the --prod flag to the vercel deploy command to deploy the project artifacts to the production environment ([df1af38](https://github.com/MohammadBnei/cv-maker/commit/df1af3898a64c6f71c0b175ec6bf4ee6bbc17f63))
+
 ## [0.6.2](https://github.com/MohammadBnei/cv-maker/compare/0.6.1...0.6.2) (2023-08-26)
 
 ## [0.6.1](https://github.com/MohammadBnei/cv-maker/compare/0.6.0...0.6.1) (2023-08-26)
