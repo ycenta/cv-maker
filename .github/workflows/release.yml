@@ -21,25 +21,31 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3.5.3
-  
+
+      - name: Restore cached Primes
+        id: cache-node-modules
+        uses: actions/cache/restore@v3
+        with:
+          path: |
+            nodes_modules.tar.gz
+          key: ${{ runner.os }}-node_modules
+      
+      - name: Untar if found
+        if: steps.cache-node-modules.cache-hit == 'true'
+        run: tar -xf node_modules.tar.gz
+
       - name: Setup pnpm
         uses: pnpm/action-setup@v2.4.0
         with:
           run_install: true
           version: 8
-      
-          
 
-      - name: Compress node_modues
-        run: tar -cf node_modules.tar.gz node_modules
-
-      - name: 'Upload Node Modules'
-        uses: actions/upload-artifact@v3
+      - name: Cache modules
+        uses: actions/cache@v3
         with:
-          name: node_modules.tar.gz
-          path: node_modules.tar.gz
-          retention-days: 1
-      
+          path: node_modules
+          key: ${{ runner.os }}-node_modules
+
       - name: git config
         run: |
           git config user.name "${GITHUB_ACTOR}"
@@ -53,7 +59,7 @@ jobs:
         run: |
           NODE_PORT=4173 pm2 start build
           sleep 5
-          curl http://localhost:4173 -I
+          curl http://0.0.0.0:4173 -I
 
       - name: snap
         run: |
@@ -75,12 +81,16 @@ jobs:
         with:
           ref: 'main'
 
-      - name: Download all workflow run artifacts
-        uses: actions/download-artifact@v3
+      - name: Restore cached Primes
+        id: cache-node-modules
+        uses: actions/cache/restore@v3
         with:
-          name: node_modules.tar.gz
-
-      - name: Decompress node_modules
+          path: |
+            nodes_modules.tar.gz
+          key: ${{ runner.os }}-node_modules
+        
+      - name: Untar if found
+        if: steps.cache-node-modules.cache-hit == 'true'
         run: tar -xf node_modules.tar.gz
 
       - name: Install Vercel CLI
