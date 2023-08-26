@@ -53,17 +53,11 @@ jobs:
 
       - run: pnpm build
 
-      - name: Install PM2
-        run: npm install pm2 -g
-      - name: Start server
-        run: |
-          NODE_PORT=4173 pm2 start build
-          sleep 5
-          curl http://0.0.0.0:4173 -I
-
       - name: snap
         run: |
           mkdir -m 777 gen
+          pnpm preview --host > server.log &
+          sleep 5
           docker run -i --init --cap-add=SYS_ADMIN -v ./gen:/home/pptruser/gen ghcr.io/puppeteer/puppeteer:latest node -e "$(cat snapshot.js)" http://0.0.0.0:4173 ./gen
           mv gen/* static/
           git add static
