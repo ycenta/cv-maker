@@ -43,10 +43,13 @@ jobs:
           run_install: true
           version: 8
 
+      - name: tar node modules
+        run: tar -cf nodes_modules.tar.gz node_modules
+
       - name: Cache modules
         uses: actions/cache@v3
         with:
-          path: node_modules
+          path: node_modules.tar.gz
           key: ${{ runner.os }}-node_modules
 
       - name: git config
@@ -62,7 +65,7 @@ jobs:
           pnpm preview --host > server.log &
           sleep 5
           cat server.log
-          docker run -i --init --cap-add=SYS_ADMIN -v ./gen:/home/pptruser/gen ghcr.io/puppeteer/puppeteer:latest node -e "$(cat snapshot.js)" http://0.0.0.0:4173 ./gen
+          docker run -i --init --cap-add=SYS_ADMIN -v ./gen:/home/pptruser/gen ghcr.io/puppeteer/puppeteer:latest node -e "$(cat snapshot.js)" http://127.0.0.1:4173 ./gen
           mv gen/* static/
           git add static
           git commit -s -m "snapshot ${{ github.sha }}"
