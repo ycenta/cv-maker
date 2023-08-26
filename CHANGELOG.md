@@ -1,5 +1,7 @@
 
 
+## [0.6.4](https://github.com/MohammadBnei/cv-maker/compare/0.6.3...0.6.4) (2023-08-26)
+
 ## [0.6.3](https://github.com/MohammadBnei/cv-maker/compare/0.6.2...0.6.3) (2023-08-26)
 
 
