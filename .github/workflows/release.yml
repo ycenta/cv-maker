@@ -29,7 +29,10 @@ jobs:
           path: |
             nodes_modules.tar.gz
           key: ${{ runner.os }}-node_modules
-      
+
+      - name: Pull image in the background
+        run: docker pull ghcr.io/puppeteer/puppeteer:latest
+
       - name: Untar if found
         if: steps.cache-node-modules.cache-hit == 'true'
         run: tar -xf node_modules.tar.gz
@@ -58,6 +61,7 @@ jobs:
           mkdir -m 777 gen
           pnpm preview --host > server.log &
           sleep 5
+          cat server.log
           docker run -i --init --cap-add=SYS_ADMIN -v ./gen:/home/pptruser/gen ghcr.io/puppeteer/puppeteer:latest node -e "$(cat snapshot.js)" http://0.0.0.0:4173 ./gen
           mv gen/* static/
           git add static
@@ -65,7 +69,6 @@ jobs:
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
 
   deploy:
     runs-on: ubuntu-latest
@@ -82,7 +85,7 @@ jobs:
           path: |
             nodes_modules.tar.gz
           key: ${{ runner.os }}-node_modules
-        
+
       - name: Untar if found
         if: steps.cache-node-modules.cache-hit == 'true'
         run: tar -xf node_modules.tar.gz
