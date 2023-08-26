@@ -31,7 +31,7 @@ jobs:
           key: ${{ runner.os }}-node_modules
 
       - name: Pull image in the background
-        run: docker pull ghcr.io/puppeteer/puppeteer:latest
+        run: docker pull -d ghcr.io/puppeteer/puppeteer:latest
 
       - name: Untar if found
         if: steps.cache-node-modules.cache-hit == 'true'
