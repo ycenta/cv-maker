@@ -96,7 +96,7 @@
 									<li class="mb-2">
 										<h4 class="font-semibold mr-2">{mission.title}</h4>
 
-										<p class="mb-2 text-sm font-normal" >{mission.description}</p>
+										<p class="mb-2 text-sm font-normal">{mission.description}</p>
 										<div class="flex flex-wrap gap-2">
 											{#each mission.skills || [] as skill}
 												<SkillBadge {skill} />
@@ -114,11 +114,10 @@
 
 			<dialog id={item.enterprise} class="modal modal-bottom sm:modal-middle">
 				<form method="dialog" class="modal-box max-h-[70vh]">
-					<button
-						class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
-						aria-label="close modal">✕</button
-					>
-					<h3 class="font-bold text-lg text-center">Missions : {item.enterprise}</h3>
+					<div class="sticky w-[14%] ml-auto -mb-8 -mr-4 top-0">
+						<button class="btn btn-sm btn-circle bg-opacity-60" aria-label="close modal">✕</button>
+					</div>
+					<h3 class="font-bold text-lg text-center w-[85%]">Missions : {item.enterprise}</h3>
 					<ul class="ml-4 mt-4">
 						{#each item.missions || [] as mission, i}
 							{#if i !== 0}
