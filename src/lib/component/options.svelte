@@ -30,7 +30,7 @@
 
 <div class="sm:w-28 sm:h-24">
 	<ul
-		class="menu sm:menu-vertical menu-horizontal flex-row-reverse sm:justify-center sm:w-min h-full flex-wrap sm:py-1 gap-3"
+		class="menu sm:menu-vertical menu-horizontal flex-row-reverse sm:justify-center sm:w-min h-full flex-wrap sm:py-1 gap-4 sm:gap-0"
 	>
 		{#if browser}
 			<li>
@@ -46,8 +46,17 @@
 				{/if}
 			</a>
 		</li>
+		<li>
+			<a
+				href="#"
+				on:click|preventDefault={() => document.getElementById('dl-dialog')?.showModal()}
+				class="p-2 m-auto"
+			>
+				<Download width={22} />
+			</a>
+		</li>
 		{#if $selectedSkills.length > 0}
-			<li class:animate-ping={pulse} >
+			<li class:animate-ping={pulse}>
 				<a
 					transition:slide
 					on:click|preventDefault={() => selectedSkills.reset()}
@@ -58,11 +67,6 @@
 				</a>
 			</li>
 		{/if}
-		<li>
-			<a href="#" on:click|preventDefault={() => document.getElementById('dl-dialog')?.showModal()} class="p-2 m-auto">
-				<Download width={22} />
-			</a>
-		</li>
 	</ul>
 </div>
 <dialog id="dl-dialog" class="modal">
