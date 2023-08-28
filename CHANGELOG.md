@@ -1,5 +1,12 @@
 
 
+## [0.7.2](https://github.com/MohammadBnei/cv-maker/compare/0.7.1...0.7.2) (2023-08-28)
+
+
+### Bug Fixes
+
+* **options:** modified options buttons to be smaller. changed bounce to pulse for filter ([5218965](https://github.com/MohammadBnei/cv-maker/commit/5218965351ef0da813709fb6268ec25be03c2292))
+
 ## [0.7.1](https://github.com/MohammadBnei/cv-maker/compare/0.7.0...0.7.1) (2023-08-28)
 
 # [0.7.0](https://github.com/MohammadBnei/cv-maker/compare/0.6.9...0.7.0) (2023-08-26)
