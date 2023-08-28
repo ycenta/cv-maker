@@ -34,7 +34,7 @@
 	};
 </script>
 
-<div class="tooltip lg:tooltip-left p-0" data-tip={$darkMode ? '→ light' : '→ dark'}>
+<div class="tooltip lg:tooltip-left p-0 w-min" data-tip={$darkMode ? '→ light' : '→ dark'}>
 	<label class="swap swap-rotate p-2 {classes}">
 		<!-- this hidden checkbox controls the state -->
 		<input aria-label="light/dark mode switch" type="checkbox" bind:checked />

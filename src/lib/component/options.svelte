@@ -30,15 +30,15 @@
 
 <div class="sm:w-28 sm:h-24">
 	<ul
-		class="menu sm:menu-vertical menu-horizontal flex-row-reverse sm:justify-center sm:w-min h-full flex-wrap sm:py-1"
+		class="menu sm:menu-vertical menu-horizontal flex-row-reverse sm:justify-center sm:w-min h-full flex-wrap sm:py-1 gap-3"
 	>
 		{#if browser}
 			<li>
-				<DarkModeBtn width={22} />
+				<DarkModeBtn width={22} classes="p-2 m-auto" />
 			</li>
 		{/if}
 		<li>
-			<a href={$page.url.pathname.includes('en') ? '/' : '/en'}>
+			<a href={$page.url.pathname.includes('en') ? '/' : '/en'} class="p-2 m-auto">
 				{#if $page.url.pathname.includes('en')}
 					<Fr width={22} />
 				{:else}
@@ -47,19 +47,19 @@
 			</a>
 		</li>
 		{#if $selectedSkills.length > 0}
-			<li class:animate-bounce={pulse}>
+			<li class:animate-ping={pulse} >
 				<a
 					transition:slide
 					on:click|preventDefault={() => selectedSkills.reset()}
 					href="/"
-					class="p-2"
+					class="p-2 m-auto"
 				>
 					<FilterMinus width={22} />
 				</a>
 			</li>
 		{/if}
 		<li>
-			<a href="#" on:click|preventDefault={() => document.getElementById('dl-dialog')?.showModal()}>
+			<a href="#" on:click|preventDefault={() => document.getElementById('dl-dialog')?.showModal()} class="p-2 m-auto">
 				<Download width={22} />
 			</a>
 		</li>
