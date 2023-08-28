@@ -59,6 +59,7 @@ jobs:
           sleep 5
           docker run -i --init --cap-add=SYS_ADMIN --network host -v ./gen:/home/pptruser/gen ghcr.io/puppeteer/puppeteer:latest node -e "$(cat snapshot.js)" http://127.0.0.1:4173 ./gen
           mv gen/* static/
+          sed -i 's/http:\/\/127.0.0.1:4173/https:\/\/cv.bnei.dev/g' ./static/*.mhtml
           git add static
           git commit -s -m "snapshot ${{ github.sha }}"
           git push
