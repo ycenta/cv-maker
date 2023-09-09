@@ -154,7 +154,7 @@ jobs:
 
       - run: pnpm build
 
-      - name: test with curl
+      - name: start server
         run: |
           pnpm preview &
           sleep 5
