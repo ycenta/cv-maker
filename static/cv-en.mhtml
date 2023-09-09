@@ -1,16 +1,16 @@
 From: <Saved by Blink>
 Snapshot-Content-Location: https://cv.bnei.dev/en?snapshot
 Subject: Mohammad-Amine BANAEI - Resume
-Date: Mon, 28 Aug 2023 17:50:56 -0000
+Date: Sat, 9 Sep 2023 22:06:44 -0000
 MIME-Version: 1.0
 Content-Type: multipart/related;
 	type="text/html";
-	boundary="----MultipartBoundary--e4ZE45kd2lGiuJFj4figGjzZrKk3c8ajLU6yAFbEal----"
+	boundary="----MultipartBoundary--Bajcp0QRrX3g3WxtUAuByT9lSq8SX4tcdmMeSsiEgD----"
 
 
-------MultipartBoundary--e4ZE45kd2lGiuJFj4figGjzZrKk3c8ajLU6yAFbEal----
+------MultipartBoundary--Bajcp0QRrX3g3WxtUAuByT9lSq8SX4tcdmMeSsiEgD----
 Content-Type: text/html
-Content-ID: <frame-AE8EE2C3864FBAA81ECD8899B8BAA26A@mhtml.blink>
+Content-ID: <frame-10BD54D96FA26BCA701ECD78510E13DD@mhtml.blink>
 Content-Transfer-Encoding: quoted-printable
 Content-Location: https://cv.bnei.dev/en?snapshot
 
@@ -25,25 +25,25 @@ ntent=3D"text/html; charset=3DUTF-8">
 		<link href=3D"https://cv.bnei.dev/_app/immutable/assets/HeadTags.53b77b=
 e7.css" rel=3D"stylesheet">
 		<link rel=3D"modulepreload" href=3D"https://cv.bnei.dev/_app/immutable/=
-entry/start.180a712b.js">
+entry/start.7ce625a5.js">
 		<link rel=3D"modulepreload" href=3D"https://cv.bnei.dev/_app/immutable/=
 chunks/scheduler.bff07679.js">
 		<link rel=3D"modulepreload" href=3D"https://cv.bnei.dev/_app/immutable/=
-chunks/singletons.f1412e5b.js">
+chunks/singletons.f8f46918.js">
 		<link rel=3D"modulepreload" href=3D"https://cv.bnei.dev/_app/immutable/=
-entry/app.9d82ac17.js">
+entry/app.7343092e.js">
 		<link rel=3D"modulepreload" href=3D"https://cv.bnei.dev/_app/immutable/=
 chunks/index.aaccf6ff.js">
 		<link rel=3D"modulepreload" href=3D"https://cv.bnei.dev/_app/immutable/=
-nodes/0.3ad63846.js">
+nodes/0.6c60ffb0.js">
 		<link rel=3D"modulepreload" href=3D"https://cv.bnei.dev/_app/immutable/=
-chunks/index.fde401a2.js">
+chunks/index.7a05c101.js">
 		<link rel=3D"modulepreload" href=3D"https://cv.bnei.dev/_app/immutable/=
-chunks/stores.6375e164.js">
+chunks/stores.5def7ed4.js">
 		<link rel=3D"modulepreload" href=3D"https://cv.bnei.dev/_app/immutable/=
-nodes/3.f917f09c.js">
+nodes/3.84f92ca3.js">
 		<link rel=3D"modulepreload" href=3D"https://cv.bnei.dev/_app/immutable/=
-chunks/HeadTags.5c8479f8.js"><title>Mohammad-Amine BANAEI - Resume</title><=
+chunks/HeadTags.18595156.js"><title>Mohammad-Amine BANAEI - Resume</title><=
 !-- HEAD_svelte-15ze8ph_START --><meta http-equiv=3D"x-ua-compatible" conte=
 nt=3D"IE=3Dedge,chrome=3D1"><meta name=3D"viewport" content=3D"width=3Ddevi=
 ce-width, initial-scale=3D1"><meta name=3D"robots" content=3D"index,follow"=
@@ -69,7 +69,8 @@ u will find all the information regarding my experiences, skills, training =
 and contact details. Feel free to contact me for any offers or for more inf=
 ormation."><!-- HTML_TAG_START --><!-- HTML_TAG_END --><!-- HTML_TAG_START =
 --><!-- HTML_TAG_END --><!-- HEAD_svelte-15ze8ph_END -->
-	</head>
+	<link rel=3D"modulepreload" as=3D"script" crossorigin=3D"" href=3D"http://=
+127.0.0.1:4173/_app/immutable/nodes/1.215f5f7c.js"></head>
 	<body data-sveltekit-preload-data=3D"hover">
 		<div style=3D"display: contents">  <div class=3D"min-h-screen dark:bg-bas=
 e-300"> <div class=3D"py-0 dark:bg-base-100 shadow-sm rounded-sm navbar "><=
@@ -2008,7 +2009,7 @@ z"></path></svg></a></div></footer>=20
 =09
 
 </body></html>
-------MultipartBoundary--e4ZE45kd2lGiuJFj4figGjzZrKk3c8ajLU6yAFbEal----
+------MultipartBoundary--Bajcp0QRrX3g3WxtUAuByT9lSq8SX4tcdmMeSsiEgD----
 Content-Type: text/css
 Content-Transfer-Encoding: quoted-printable
 Content-Location: https://cv.bnei.dev/_app/immutable/assets/0.3eaae183.css
@@ -3758,7 +3759,7 @@ b(38 38 38 / var(--tw-bg-opacity)); }
   .lg\:columns-2 { columns: 2; }
   .lg\:text-left { text-align: left; }
 }
-------MultipartBoundary--e4ZE45kd2lGiuJFj4figGjzZrKk3c8ajLU6yAFbEal----
+------MultipartBoundary--Bajcp0QRrX3g3WxtUAuByT9lSq8SX4tcdmMeSsiEgD----
 Content-Type: text/css
 Content-Transfer-Encoding: quoted-printable
 Content-Location: https://cv.bnei.dev/_app/immutable/assets/HeadTags.53b77be7.css
@@ -3860,7 +3861,7 @@ rgb(31 41 55 / var(--tw-bg-opacity)); }
   .desktop-grid.svelte-1ks3fm9 { display: grid; grid-template: "skill skill=
 " min-content "education experience" auto / 30% auto; gap: 0px; }
 }
-------MultipartBoundary--e4ZE45kd2lGiuJFj4figGjzZrKk3c8ajLU6yAFbEal----
+------MultipartBoundary--Bajcp0QRrX3g3WxtUAuByT9lSq8SX4tcdmMeSsiEgD----
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Location: https://voconsteroid.com/voconsteroidLogoNT384.png
@@ -4010,7 +4011,7 @@ AABGEQAAYBQBAABGEQAAYBQBAABGEQAAYBQBAABGEQAAYBQBAABGEQAAYBQBAABGEQAAYBQBAABG
 EQAAYBQBAABGEQAAYBQBAABGEQAAYBQBAABGEQAAYBQBAABGEQAAYBQBAABGEQAAYBQBAABGEQAA
 YBQBAABGEQAAYBQBAABGEQAAYBQBAABGEQAAYFEURf8P1Rxy/6Nu9+AAAAAASUVORK5CYII=
 
-------MultipartBoundary--e4ZE45kd2lGiuJFj4figGjzZrKk3c8ajLU6yAFbEal----
+------MultipartBoundary--Bajcp0QRrX3g3WxtUAuByT9lSq8SX4tcdmMeSsiEgD----
 Content-Type: image/svg+xml
 Content-Transfer-Encoding: quoted-printable
 Content-Location: https://cv.bnei.dev/boxing-glove.svg
@@ -4032,7 +4033,7 @@ Content-Location: https://cv.bnei.dev/boxing-glove.svg
 333c0 .92-1.221 1.208-2.326 1.208h-5C15.57 34 15 33.712 15 32.792v-3.333c0-=
 .921.57-1.459 1.674-1.459h5z"/>
 </svg>
-------MultipartBoundary--e4ZE45kd2lGiuJFj4figGjzZrKk3c8ajLU6yAFbEal----
+------MultipartBoundary--Bajcp0QRrX3g3WxtUAuByT9lSq8SX4tcdmMeSsiEgD----
 Content-Type: image/svg+xml
 Content-Transfer-Encoding: quoted-printable
 Content-Location: https://cv.bnei.dev/reading.svg
@@ -4049,7 +4050,7 @@ Content-Location: https://cv.bnei.dev/reading.svg
 3-3-3z"/>
     </g>
 </svg>
-------MultipartBoundary--e4ZE45kd2lGiuJFj4figGjzZrKk3c8ajLU6yAFbEal----
+------MultipartBoundary--Bajcp0QRrX3g3WxtUAuByT9lSq8SX4tcdmMeSsiEgD----
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Location: https://cv.bnei.dev/strategy.png
@@ -4416,7 +4417,7 @@ FqIAAADQQhQAAABaiAIAAEALUQAAAGghCgAAAC1EAQAAoIUoAAAAtBAFAACAFqIAAADQQhQAAABa
 KJL0R+sQAABguFxVVdYZAADAkLEFAABAC1EAAABoIQoAAAAt9F9LL9PzoI2q/QAAAABJRU5ErkJg
 gg==
 
-------MultipartBoundary--e4ZE45kd2lGiuJFj4figGjzZrKk3c8ajLU6yAFbEal----
+------MultipartBoundary--Bajcp0QRrX3g3WxtUAuByT9lSq8SX4tcdmMeSsiEgD----
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Location: https://cv.bnei.dev/harmony.png
@@ -5209,4 +5210,4 @@ owdgNNkCABdQC1QaPRAhhBAJsQHoDzQbPRAjyQoANAHnksT1oIUQIonsB84jySd/kADgK+uAmqN/
 CyGE6JxqgWpgvdEDMQPZAmjLAVwCTAIGArmANIwXQghragV2AquBmag5X0l99O9Y/weMQl/eslRo
 8gAAAABJRU5ErkJggg==
 
-------MultipartBoundary--e4ZE45kd2lGiuJFj4figGjzZrKk3c8ajLU6yAFbEal------
+------MultipartBoundary--Bajcp0QRrX3g3WxtUAuByT9lSq8SX4tcdmMeSsiEgD------
