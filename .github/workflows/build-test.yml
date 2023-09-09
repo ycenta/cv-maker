@@ -6,13 +6,13 @@ on:
       - '**/*.svelte'
       - '**/*.ts'
       - '**/*.json'
-      - '**/release.yml'
+      - '**/build-test.yml'
   pull_request: 
     paths:
       - '**/*.svelte'
       - '**/*.ts'
       - '**/*.json'
-      - '**/release.yml'
+      - '**/build-test.yml'
 
 jobs:
   build-test:
@@ -44,7 +44,7 @@ jobs:
         run: |
           pnpm preview &
           sleep 5
-          curl -v http://127.0.0.1:4173/ -I
+          curl -v http://localhost:4173/ -I
 
   lighthouse:
     runs-on: ubuntu-latest
@@ -71,7 +71,7 @@ jobs:
 
       - run: pnpm build
 
-      - name: test with curl
+      - name: start server
         run: |
           pnpm preview &
           sleep 5
