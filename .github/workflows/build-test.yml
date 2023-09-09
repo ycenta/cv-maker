@@ -44,7 +44,7 @@ jobs:
         run: |
           pnpm preview &
           sleep 5
-          curl -v http://127.0.0.1:4173/ -I
+          curl -v http://localhost:4173/ -I
 
   lighthouse:
     runs-on: ubuntu-latest
