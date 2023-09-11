@@ -22,7 +22,7 @@ jobs:
 
       - name: Run the server
         run: |
-          bun run peview &
+          bun run preview &
           sleep 5
 
       - name: Curl the server
