@@ -11,8 +11,6 @@ jobs:
       - uses: actions/checkout@v4
 
       - uses: pnpm/action-setup@v2.4.0
-        with:
-          bun-version: latest
 
       - name: Install dependenciees
         run: pnpm install
