@@ -1,6 +1,6 @@
 name: Intro to Github Actions
 
-# what triggers make this workflow run
+# what triggers make this workflow run test
 on: 
   push:
 
