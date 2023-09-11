@@ -6,7 +6,7 @@
 
 <script lang="ts">
 	export let title: ITitle = {
-		jobDesc: 'Ingénieur web'
+		jobDesc: 'Ingénieur WebSque'
 	};
 </script>
 
