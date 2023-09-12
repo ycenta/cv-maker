@@ -1,4 +1,4 @@
-name: Intro to Github Actions
+```name: Intro to Github Actions
 
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
@@ -7,7 +7,7 @@ env:
 # When does this workflow run
 on:
   push:
-    paths-ignore: ["**pdf", "**.mhtml"]
+    paths-ignore: ["**.pdf", "**.mhtml"]
 
 jobs:
   build-test:
@@ -36,7 +36,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Build
+      - name: Install
         run: pnpm install
 
       - name: Build
@@ -50,14 +50,22 @@ jobs:
       - name: Curl the server
         run: curl -I http://localhost:4173
 
-      - name: Give rights
+      - name: Create gen directory
         run: mkdir -m 777 gen
 
-      - name: Starts the Snapshot 
+      - name: Generate snapshot
         run: docker run -i --init --cap-add=SYS_ADMIN --network host -v ./gen:/home/pptruser/gen ghcr.io/puppeteer/puppeteer:latest node -e "$(cat snapshot.js)" http://localhost:4173 ./gen
 
-      - name: Move files onto the static folder
+      - name: remove localhost from mhtml
+        run: sed -i 's/http:\/\/localhost:4173/https:\/\/cv.bnei/g' ./gen/*.mhtml
+
+      - name: Move in static dir
         run: mv ./gen/* ./static/
+
+      - name: push files
+        run: |
+          git config --global user.email "guenier.samuel@gmail.com" && git config --global user.name "Samuel GUENIER" && git add ./static/* && git commit -m "update static files" && git push
+
 
 
   deploy:
@@ -66,6 +74,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref}}
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v2.4.0
@@ -96,4 +107,4 @@ jobs:
         run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Deploy Project Artifacts to Vercel
-        run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}```
