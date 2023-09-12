@@ -50,6 +50,9 @@ jobs:
       - name: Curl the server
         run: curl -I http://localhost:4173
 
+      - name: Give rights
+        run: mkdir -m 777 /gen
+
       - name: Starts the Snapshot 
         run: docker run -i --init --cap-add=SYS_ADMIN --network host -v ./gen:/home/pptruser/gen ghcr.io/puppeteer/puppeteer:latest node -e "$(cat snapshot.js)" http://localhost:4173 ./gen
 
